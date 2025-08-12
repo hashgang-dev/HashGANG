@@ -18,7 +18,7 @@ body {
 }
 a {
   transition: all 0.3s ease;
-  color: #38B;
+  color: #470470;
 }
 
 a:hover,
@@ -55,7 +55,7 @@ blockquote {
 }
 
 .tm-text-primary {
-  color: #37A;
+  color: #470470;
 }
 
 .tm-font-big {
@@ -64,14 +64,14 @@ blockquote {
 
 .tm-btn-primary {
   color: white;
-  background-color: #369;
+  background-color: #470470;
   padding: 14px 30px;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
   color: white;
-  background-color: #38B;
+  background-color: #470470;
 }
 
 /* Navbar */
@@ -97,11 +97,11 @@ blockquote {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #38B;
+  color: #470470;
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: #369;
+  color: #470470;
 }
 
 .nav-item {
@@ -113,14 +113,14 @@ blockquote {
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: #369;
+  color: #470470;
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
 .tm-navbar.scroll .tm-nav-link.current,
 .tm-nav-link:hover {
   color: #FFF;
-  background-color: #369;
+  background-color: #470470;
 }
 
 .navbar-toggler {
@@ -229,7 +229,7 @@ blockquote {
 .tm-down-arrow {
   	color: #FFF;
     cursor: pointer;
-    background: #357;
+    background: #470470;
     padding: 15px 40px;
     transition: all 0.3s ease;
 }
@@ -237,7 +237,7 @@ blockquote {
 .tm-down-arrow:hover,
 .tm-down-arrow:focus {
   color: #FFF;
-  background: #37A;
+  background: #470470;
   padding: 20px 50px;
 }
 
@@ -258,7 +258,7 @@ blockquote {
 
 .tm-icon {
   display: block;
-  color: #37A;
+  color: #470470;
 }
 
 .tm-continue {
@@ -349,7 +349,7 @@ blockquote {
 .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #3ba0dd;
+  color: #470470;
 }
 
 .tm-testimonials-carousel .slick-dots li button:before {
@@ -374,7 +374,7 @@ blockquote {
   position: relative;
   float: left;
   overflow: hidden;
-  background: #3085a3;
+  background: #470470;
   text-align: center;
   cursor: pointer;
 }
@@ -465,7 +465,7 @@ figure.effect-honey figcaption::before {
   left: 0;
   width: 100%;
   height: 10px;
-  background: #38C;
+  background: #470470;
   content: "";
   -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
@@ -541,7 +541,7 @@ figure.effect-honey:hover h2 i {
 
 .item-link:hover i,
 .item-link:hover span {
-  color: #3496d8;
+  color: #470470;
 }
 
 .tm-input {
@@ -557,14 +557,14 @@ figure.effect-honey:hover h2 i {
 .tm-btn-submit {
 	font-size: 0.9em;
 	color: #fff;
-	background-color: #369;
+	background-color: #470470;
 	width: 50%;
 	margin-bottom: 60px;
 }
 
 .tm-btn-submit:hover {
 	color: #fff;
-	background-color: #38B;
+	background-color: #470470;
 }
 
 ::placeholder {
@@ -605,7 +605,7 @@ figure.effect-honey:hover h2 i {
 
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-  color: #38B;
+  color: #470470;
   text-decoration: none;
 }
 
