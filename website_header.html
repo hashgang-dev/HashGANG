@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HashGANG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #470470;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+                margin-top: 10px;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .logo-container {
+                flex-grow: 1;
+            }
+        }
+
+        iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: calc(100vh - 70px);
+            /* Adjust for header height */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://hashgang-dev.github.io/HashGANG/img/logoGIF-v2.gif" alt="Logo" class="logo" />
+            <div class="company-name">HashGANG</div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="mainMenu">
+            <a href="https://hashgang-dev.github.io/HashGANG/#infinite" target="contentFrame">Home</a>
+            <a href="https://hashgang-dev.github.io/HashGANG/#whatwedo" target="contentFrame">What We Do</a>
+            <a href="https://hashgang-dev.github.io/HashGANG/#testimonials" target="contentFrame">Social Impact</a>
+            <a href="https://hashgang-dev.github.io/HashGANG/#gallery" target="contentFrame">About Us</a>
+            <a href="https://hashgang-dev.github.io/HashGANG/#contact" target="contentFrame">Contact</a>
+            <a href="https://templatemo.com/page/1" target="contentFrame">Templates</a>
+            <a href="https://www.hashgang.com/careers" target="_blank">Careers</a>
+        </nav>
+    </header>
+
+    <iframe name="contentFrame" src="https://hashgang-dev.github.io/HashGANG/#infinite" title="Embedded Page">
+        Your browser does not support iframes.
+    </iframe>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mainMenu");
+            menu.classList.toggle("show");
+        }
+
+        // Close menu after clicking a menu item (on mobile)
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuLinks = document.querySelectorAll("#mainMenu a");
+            const menu = document.getElementById("mainMenu");
+
+            menuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    // Only close menu if it's visible (mobile)
+                    if (window.innerWidth <= 768 && menu.classList.contains("show")) {
+                        menu.classList.remove("show");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
