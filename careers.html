@@ -1,158 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student Internship Opportunity</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Opportunity</title>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-    }
-
-    h1, h2 {
-      color: #470470;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 30px;
-    }
-
-    p {
-      margin-bottom: 15px;
-    }
-
-    ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    .highlight {
-      background: #f3e8f9;
-      padding: 10px 15px;
-      border-left: 5px solid #470470;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    .apply-button {
-      display: inline-block;
-      background-color: #470470;
-      color: #fff;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      margin-top: 20px;
-      cursor: pointer;
-    }
-
-    .apply-button:hover {
-      background-color: #5e2d8d;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 25px 20px;
+    <style>
+      :root {
+        --primary: #470470;
+        --secondary: #7b2cbf;
+        --light-bg: #f6f7fb;
+        --card-bg: #ffffff;
+        --text-dark: #333;
+        --text-light: #666;
       }
 
-      h1 {
-        font-size: 1.6rem;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #f3e8f9, #f9f9f9);
+        color: var(--text-dark);
+        line-height: 1.7;
+        padding: 30px 15px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        background: var(--card-bg);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1rem;
+        opacity: 0.95;
+      }
+
+      /* Content */
+      .content {
+        padding: 40px 35px;
+      }
+
+      .highlight {
+        background: #f3e8f9;
+        border-left: 6px solid var(--primary);
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        margin-bottom: 35px;
       }
 
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .card {
+        background: var(--light-bg);
+        border-radius: 12px;
+        padding: 25px 25px;
+        margin-bottom: 25px;
+      }
+
+      ul {
+        margin-left: 18px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        color: var(--text-light);
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+        padding: 35px 20px 45px;
+        background: linear-gradient(135deg, #faf5ff, #ffffff);
       }
 
       .apply-button {
-        width: 100%;
-        text-align: center;
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        padding: 14px 36px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 8px 20px rgba(71, 4, 112, 0.3);
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Come, join us — let’s grow together!</h1>
-    <p>💼 <strong>Internship Opportunity for Students (Degree / Engineering / Graduation)</strong></p>
-    <div class="highlight">
-      ✅ No bonds. No fees. Just mutual commitment.
+
+      .apply-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(71, 4, 112, 0.4);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 1.7rem;
+        }
+
+        .content {
+          padding: 30px 20px;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>💼 Internship Opportunity</h1>
+        <p><strong>For Degree / Engineering / Graduation Students</strong></p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="highlight">
+          🚀 No bonds. No fees. Just mutual commitment.
+        </div>
+
+        <div class="card">
+          <h2>📌 Overview</h2>
+          <ul>
+            <li>
+              Work on <strong>real-time projects</strong> under mentorship and
+              guidance
+            </li>
+            <li>
+              Focused on
+              <strong>skill development and practical learning</strong>
+            </li>
+            <li>
+              Remote internship (availability during agreed working hours
+              required)
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>⏳ Duration & Commitment</h2>
+          <ul>
+            <li><strong>Total Duration:</strong> 6–10 months</li>
+            <li><strong>Mode:</strong> Part-time / Full-time</li>
+            <li><strong>Daily Commitment:</strong> 4–8 hours/day</li>
+          </ul>
+          <p>
+            ⚠️ This internship is primarily educational. Tasks are designed for
+            learning, not as replacement for employment.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>📚 Training & Mentorship</h2>
+          <ul>
+            <li>Structured guidance from assigned mentors</li>
+            <li>Self-learning supported with resources and supervision</li>
+            <li>Clear learning outcomes defined at the start</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>💰 Compensation Model</h2>
+          <ul>
+            <li><strong>Virtual equity only</strong></li>
+            <li>Equity allocated purely on performance</li>
+            <li>
+              Buyback or realization only once the company generates revenue
+            </li>
+          </ul>
+          <p>
+            ⚠️ This is an educational internship. No monetary stipend is
+            provided.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>📊 Performance & Evaluation</h2>
+          <ul>
+            <li>Daily performance evaluation</li>
+            <li>Regular feedback and progress tracking</li>
+            <li>
+              Internship may be
+              <strong>terminated if learning objectives are not met</strong>
+            </li>
+            <li>
+              Certificate or virtual equity provided only after successful
+              completion of the internship
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>👨‍🏫 Mentorship & Support</h2>
+          <ul>
+            <li>Assigned mentor for every intern</li>
+            <li>Guidance, learning resources, and project supervision</li>
+            <li>Learning-focused environment</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>⚖️ Legal Position</h2>
+          <ul>
+            <li>
+              Explicitly framed as a
+              <strong>“training/educational internship”</strong>
+            </li>
+            <li>
+              Interns are <strong>not employees</strong>; participation is
+              voluntary
+            </li>
+            <li>
+              Completion and rewards are based on
+              <strong>learning outcomes</strong>, not employment
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call To Action -->
+      <div class="cta">
+        <a
+          href="https://www.hashgang.com/internship"
+          target="_blank"
+          class="apply-button"
+        >
+          🚀 Apply Now
+        </a>
+      </div>
     </div>
-    <p>Are you in college and already thinking ahead? Want to build real skills, work on real projects, and secure your future — while your friends are still figuring things out?</p>
-    <p>🚀 Start your journey with us. Learn. Earn. Grow.</p>
-    <p>We’re offering a hands-on internship program designed for students like YOU — ambitious, curious, and ready to stand out.</p>
-
-    <h2>💡 Why This Internship is Different</h2>
-    <blockquote>💬 “Start early, grow faster.”</blockquote>
-    <p>At college, you learn theory. With us, you learn how the real world works.</p>
-    <p>Whether it’s coding, design, digital marketing, communication, or business strategy, we train you from the ground up — no prior experience needed.</p>
-    <p>By the time you graduate, you'll not only be job-ready, but possibly already employed.</p>
-
-    <h2>👨‍💻 Internship Details</h2>
-    <ul>
-      <li><strong>Duration:</strong> 1200 hours (~6 to 10 months)</li>
-      <li><strong>Mode:</strong> Part-time/Full-time · 4–8 hours/day · 6 days/week · Remote-friendly</li>
-      <li><strong>Eligibility:</strong> Graduation Students (Any Stream)</li>
-      <li><strong>Skills Required:</strong> Just basic communication & a strong desire to learn</li>
-      <li><strong>Compensation:</strong> Based on mutual agreement (virtual equity model or hybrid)</li>
-      <li><strong>Tools & Training:</strong> We’ll teach everything from scratch, based on your interest area</li>
-    </ul>
-
-    <h2>🎯 Who Should Apply?</h2>
-    <ul>
-      <li>You're serious about your career and future</li>
-      <li>You're willing to commit long-term (at least until graduation)</li>
-      <li>You want to explore tech, startups, business, or creative roles</li>
-      <li>You prefer real skills + real experience over textbook theory</li>
-      <li>You value growth, mentorship, and long-term success</li>
-    </ul>
-
-    <h2>🎁 What You Get</h2>
-    <ul>
-      <li>✅ Hands-on training in real projects</li>
-      <li>✅ Monthly earnings based on contribution</li>
-      <li>✅ Mentorship from experienced professionals</li>
-      <li>✅ Opportunity to grow into full-time employment</li>
-      <li>✅ Personal growth, confidence, and purpose</li>
-      <li>✅ No bonds. No fees. Just mutual commitment.</li>
-    </ul>
-
-    <h2>🌱 A Path Beyond Internship</h2>
-    <p>This isn’t just an internship — it’s a career launchpad.</p>
-    <p>We usually hire directly from our interns. If you stay committed, you’ll transition into a paid employee role (salary + internal equity model), well before your graduation.</p>
-
-    <a href="https://www.hashgang.com/internship" target="_blank" class="apply-button">Apply Now</a>
-  </div>
-</body>
+  </body>
 </html>
