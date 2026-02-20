@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#GANG - Document Verification</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        background: #f4f6f8;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #470470;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      .company-name {
+        font-size: 1.8em;
+        font-weight: bold;
+      }
+
+      main {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* changed from center */
+        padding: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        margin-top: 40px; /* move it a bit closer to header */
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #2c3e50;
+      }
+      .valid {
+        color: #27ae60;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .invalid {
+        color: #c0392b;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .doc-details p {
+        margin: 10px 0;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .card {
+          padding: 20px;
+          margin-top: 30px;
+        }
+        .valid,
+        .invalid {
+          font-size: 1.1rem;
+        }
+        .doc-details p {
+          font-size: 0.95rem;
+        }
+      }
+      .doc-content {
+        text-align: left; /* ensures the inner content is left-aligned */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="https://hashgang-dev.github.io/HashGANG/img/logoGIF-v3.gif"
+          alt="Logo"
+          class="logo"
+        />
+        <div class="company-name">HashGANG</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div id="result" class="doc-details"></div>
+      </div>
+    </main>
+
+    <script>
+      const documents = {
+        251006004: {
+          data: `
+      <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
+            This is to certify that <b><u>MANDADAPU SARANYA</u></b> (ID: <b>251006004</b>) participated in the 
+            <b>Internship Program (Software Development)</b> with <b>Hashgang Solutions Private Limited</b>, located at 
+            <i>21-10/2-239, Vijayawada, Andhra Pradesh, India – 520003</i>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            The internship was undertaken in <b>Remote mode</b> from <b><u>Oct 6, 2025</u></b> to <b><u>Jan 19, 2026</u></b>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            During this period, the intern completed <b><u>370 hours</u></b> of internship training and project-related assignments. 
+            The intern carried out the assigned tasks with sincerity and demonstrated <b>foundational technical understanding</b> and 
+            <b>professional conduct</b>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            The internship was concluded upon securing a professional employment opportunity. This certificate acknowledges the intern’s participation and contribution during the tenure with the organization.
+        </p>
+
+        <p style="margin-top: 40px; font-size: 16px;">
+            <b>Certificate No:</b> <b><u>HRD/INT-P/251006004</u></b>
+        </p>
+    `,
+        },
+        251006003: {
+          data: `
+        <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
+            This is to certify that <b><u>MARADANA BALAJI</u></b> (ID: <b>251006003</b>) participated in the 
+            <b>Internship Program (Software Development)</b> with <b>Hashgang Solutions Private Limited</b>, located at 
+            <i>21-10/2-239, Vijayawada, Andhra Pradesh, India – 520003</i>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            The internship was undertaken in <b>Remote mode</b> from <b><u>Oct 6, 2025</u></b> to <b><u>Jan 21, 2026</u></b>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            During this period, the intern completed <b><u>410 hours</u></b> of internship training and project-related assignments. 
+            The intern carried out the assigned tasks with sincerity and demonstrated <b>foundational technical understanding</b> and 
+            <b>professional conduct</b>.
+        </p>
+
+        <p style="font-size: 16px; line-height: 1.6;">
+            The internship was concluded upon securing a professional employment opportunity. This certificate acknowledges the intern’s participation and contribution during the tenure with the organization.
+        </p>
+
+        <p style="margin-top: 40px; font-size: 16px;">
+            <b>Certificate No:</b> <b><u>HRD/INT-P/251006003</u></b>
+        </p>
+    `,
+        },
+      };
+
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      const docId = getQueryParam("doc_id");
+      const resultDiv = document.getElementById("result");
+
+      if (docId && documents[docId]) {
+        const doc = documents[docId];
+        resultDiv.innerHTML = `
+        <p class="valid">QR code is VALID ✅</p>
+        <p><strong>You can verify this document using the details below:</strong></p>
+        <div class="doc-content">
+            ${doc.data}
+        </div>
+    `;
+      } else {
+        resultDiv.innerHTML = `<p class="invalid">Invalid QR Code ❌</p>`;
+      }
+    </script>
+  </body>
+</html>
