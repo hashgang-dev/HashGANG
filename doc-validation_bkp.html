@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#GANG - Document Verification</title>
-
     <style>
       * {
         margin: 0;
@@ -38,7 +37,6 @@
         height: 50px;
         margin-right: 10px;
       }
-
       .company-name {
         font-size: 1.8em;
         font-weight: bold;
@@ -48,7 +46,7 @@
         flex-grow: 1;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-start; /* changed from center */
         padding: 20px;
       }
 
@@ -60,56 +58,54 @@
         width: 100%;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         text-align: center;
-        margin-top: 40px;
+        transition: transform 0.3s ease;
+        margin-top: 40px; /* move it a bit closer to header */
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
       }
 
       h1 {
         margin-bottom: 20px;
         color: #2c3e50;
       }
-
-      input {
-        padding: 10px;
-        width: 80%;
-        margin-bottom: 15px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-      }
-
-      button {
-        padding: 10px 20px;
-        background: #470470;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background: #5e0a8c;
-      }
-
       .valid {
         color: #27ae60;
         font-weight: bold;
         font-size: 1.2rem;
         margin-bottom: 15px;
       }
-
       .invalid {
         color: #c0392b;
         font-weight: bold;
         font-size: 1.2rem;
         margin-bottom: 15px;
       }
-
       .doc-details p {
         margin: 10px 0;
         font-size: 1rem;
       }
 
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .card {
+          padding: 20px;
+          margin-top: 30px;
+        }
+        .valid,
+        .invalid {
+          font-size: 1.1rem;
+        }
+        .doc-details p {
+          font-size: 0.95rem;
+        }
+      }
       .doc-content {
-        text-align: left;
+        text-align: left; /* ensures the inner content is left-aligned */
       }
     </style>
   </head>
@@ -117,28 +113,24 @@
   <body>
     <header>
       <div class="logo-container">
-        <img src="img/logoGIF-v3.gif" alt="Logo" class="logo" />
+        <img
+          src="https://hashgang-dev.github.io/HashGANG/img/logoGIF-v3.gif"
+          alt="Logo"
+          class="logo"
+        />
         <div class="company-name">HashGANG</div>
       </div>
     </header>
 
     <main>
       <div class="card">
-        <h1>Verify Certificate</h1>
-
-        <input type="text" id="docInput" placeholder="Enter Certificate No" />
-
-        <br />
-
-        <button onclick="verifyDoc()">Verify</button>
-
-        <div id="result" class="doc-details" style="margin-top: 20px"></div>
+        <div id="result" class="doc-details"></div>
       </div>
     </main>
 
     <script>
       const documents = {
-        "HRD/INT-P/251006004": {
+        251006004: {
           data: `
       <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
             This is to certify that <b><u>MANDADAPU SARANYA</u></b> (ID: <b>251006004</b>) participated in the 
@@ -165,8 +157,7 @@
         </p>
     `,
         },
-
-        "HRD/INT-P/251006003": {
+        251006003: {
           data: `
         <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
             This is to certify that <b><u>MARADANA BALAJI</u></b> (ID: <b>251006003</b>) participated in the 
@@ -195,35 +186,26 @@
         },
       };
 
-      function verifyDoc() {
-        const docId = document.getElementById("docInput").value.trim();
-        const resultDiv = document.getElementById("result");
-
-        if (docId && documents[docId]) {
-          const doc = documents[docId];
-
-          resultDiv.innerHTML = `
-            <p class="valid">Certificate is VALID ✅</p>
-            <p><strong>Verified Details:</strong></p>
-            <div class="doc-content">
-              ${doc.data}
-            </div>
-          `;
-        } else {
-          resultDiv.innerHTML = `
-            <p class="invalid">Invalid Certificate ID ❌</p>
-          `;
-        }
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
       }
 
-      // Enter key support
-      document
-        .getElementById("docInput")
-        .addEventListener("keypress", function (e) {
-          if (e.key === "Enter") {
-            verifyDoc();
-          }
-        });
+      const docId = getQueryParam("doc_id");
+      const resultDiv = document.getElementById("result");
+
+      if (docId && documents[docId]) {
+        const doc = documents[docId];
+        resultDiv.innerHTML = `
+        <p class="valid">QR code is VALID ✅</p>
+        <p><strong>You can verify this document using the details below:</strong></p>
+        <div class="doc-content">
+            ${doc.data}
+        </div>
+    `;
+      } else {
+        resultDiv.innerHTML = `<p class="invalid">Invalid QR Code ❌</p>`;
+      }
     </script>
   </body>
 </html>
