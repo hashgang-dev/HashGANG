@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#GANG - Document Verification</title>
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
+      :root {
+        --bg1: #0f0f14;
+        --bg2: #1b1430;
+        --card: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --text: #eaeaf0;
+        --muted: rgba(234, 234, 240, 0.7);
+        --green: #22c55e;
+        --red: #ef4444;
+        --primary: #8b5cf6;
+        --radius: 18px;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -13,103 +31,132 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Poppins", sans-serif;
         min-height: 100vh;
-        background: #f4f6f8;
+        background: radial-gradient(circle at top, var(--bg2), var(--bg1) 60%);
         display: flex;
         flex-direction: column;
+        color: var(--text);
       }
 
-      header {
-        background-color: #470470;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-      }
-
-      .logo-container {
-        display: flex;
-        align-items: center;
-      }
-
-      .logo {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-      }
-
-      .company-name {
-        font-size: 1.8em;
-        font-weight: bold;
-      }
-
+      /* MAIN */
       main {
-        flex-grow: 1;
+        flex: 1;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        padding: 20px;
+        align-items: center;
+        padding: 40px 16px;
       }
 
+      /* CARD */
       .card {
-        background: #fff;
-        border-radius: 12px;
-        padding: 30px;
-        max-width: 500px;
         width: 100%;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        max-width: 560px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+        padding: 32px;
         text-align: center;
-        margin-top: 40px;
       }
 
       h1 {
-        margin-bottom: 20px;
-        color: #2c3e50;
+        font-size: 22px;
+        margin-bottom: 18px;
+        font-weight: 600;
       }
 
+      /* INPUT */
       input {
-        padding: 10px;
-        width: 80%;
-        margin-bottom: 15px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text);
+        outline: none;
+        margin-bottom: 12px;
+        font-size: 14px;
+        transition: 0.2s ease;
       }
 
+      input:focus {
+        border-color: var(--primary);
+      }
+
+      /* BUTTON */
       button {
-        padding: 10px 20px;
-        background: #470470;
-        color: #fff;
+        width: 100%;
+        padding: 12px;
         border: none;
-        border-radius: 6px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #7c3aed, #a855f7);
+        color: white;
+        font-weight: 600;
         cursor: pointer;
+        transition: 0.2s ease;
       }
 
       button:hover {
-        background: #5e0a8c;
+        transform: translateY(-2px);
+      }
+
+      /* RESULT BOX */
+      .doc-details {
+        margin-top: 20px;
+        text-align: left;
       }
 
       .valid {
-        color: #27ae60;
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
+        color: var(--green);
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
       }
 
       .invalid {
-        color: #c0392b;
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-      }
-
-      .doc-details p {
-        margin: 10px 0;
-        font-size: 1rem;
+        color: var(--red);
+        font-weight: 600;
+        text-align: center;
       }
 
       .doc-content {
-        text-align: left;
+        margin-top: 15px;
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* HEADER (if footer/header comes later) */
+      header {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        .card {
+          padding: 22px;
+        }
+
+        h1 {
+          font-size: 18px;
+        }
       }
     </style>
   </head>
@@ -120,12 +167,9 @@
         <h1>Verify Certificate</h1>
 
         <input type="text" id="docInput" placeholder="Enter Certificate No" />
-
-        <br />
-
         <button onclick="verifyDoc()">Verify</button>
 
-        <div id="result" class="doc-details" style="margin-top: 20px"></div>
+        <div id="result" class="doc-details"></div>
       </div>
     </main>
 
@@ -145,23 +189,23 @@
       const documents = {
         "HRD/INT-P/251006004": {
           data: `
-      <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
+      <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             This is to certify that <b><u>MANDADAPU SARANYA</u></b> (ID: <b>251006004</b>) participated in the 
             <b>Internship Program (Software Development)</b> with <b>Hashgang Solutions Private Limited</b>, located at 
             <i>21-10/2-239, Vijayawada, Andhra Pradesh, India – 520003</i>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             The internship was undertaken in <b>Remote mode</b> from <b><u>Oct 6, 2025</u></b> to <b><u>Jan 19, 2026</u></b>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             During this period, the intern completed <b><u>370 hours</u></b> of internship training and project-related assignments. 
             The intern carried out the assigned tasks with sincerity and demonstrated <b>foundational technical understanding</b> and 
             <b>professional conduct</b>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             The internship was concluded upon securing a professional employment opportunity. This certificate acknowledges the intern’s participation and contribution during the tenure with the organization.
         </p>
 
@@ -173,23 +217,23 @@
 
         "HRD/INT-P/251006003": {
           data: `
-        <p style="margin-top: 40px; font-size: 16px; line-height: 1.6;">
+      <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             This is to certify that <b><u>MARADANA BALAJI</u></b> (ID: <b>251006003</b>) participated in the 
             <b>Internship Program (Software Development)</b> with <b>Hashgang Solutions Private Limited</b>, located at 
             <i>21-10/2-239, Vijayawada, Andhra Pradesh, India – 520003</i>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             The internship was undertaken in <b>Remote mode</b> from <b><u>Oct 6, 2025</u></b> to <b><u>Jan 21, 2026</u></b>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             During this period, the intern completed <b><u>410 hours</u></b> of internship training and project-related assignments. 
             The intern carried out the assigned tasks with sincerity and demonstrated <b>foundational technical understanding</b> and 
             <b>professional conduct</b>.
         </p>
 
-        <p style="font-size: 16px; line-height: 1.6;">
+        <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
             The internship was concluded upon securing a professional employment opportunity. This certificate acknowledges the intern’s participation and contribution during the tenure with the organization.
         </p>
 
@@ -205,23 +249,19 @@
         const resultDiv = document.getElementById("result");
 
         if (docId && documents[docId]) {
-          const doc = documents[docId];
-
           resultDiv.innerHTML = `
             <p class="valid">Certificate is VALID ✅</p>
-            <p><strong>Verified Details:</strong></p>
             <div class="doc-content">
-              ${doc.data}
+              ${documents[docId].data}
             </div>
           `;
         } else {
           resultDiv.innerHTML = `
-            <p class="invalid">Invalid Certificate ID ❌</p>
+            <p class="invalid">Invalid Certificate No ❌</p>
           `;
         }
       }
 
-      // Enter key support
       document
         .getElementById("docInput")
         .addEventListener("keypress", function (e) {
