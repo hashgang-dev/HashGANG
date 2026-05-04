@@ -4,126 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#GANG - Static Website Pricing</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <style>
+      :root {
+        --bg: #0f0f14;
+        --card: rgba(255, 255, 255, 0.06);
+        --card-border: rgba(255, 255, 255, 0.12);
+        --text: #eaeaf0;
+        --muted: rgba(234, 234, 240, 0.7);
+        --accent: #22c55e;
+        --radius: 18px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
-        margin: 0;
-        background: #f4f4f4;
-        color: #333;
+        background: radial-gradient(circle at top, #1b1430, #0f0f14 60%);
+        color: var(--text);
+        line-height: 1.6;
       }
 
       header {
-        background-color: #470470;
-        color: #fff;
-        padding: 20px 0;
+        padding: 28px 20px;
         text-align: center;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--card-border);
       }
 
       header h1 {
-        margin: 0;
-        font-size: 32px;
+        font-size: 28px;
+        font-weight: 600;
       }
 
       .container {
-        padding: 30px 20px;
-        max-width: 1200px;
+        max-width: 1100px;
         margin: auto;
+        padding: 40px 18px;
       }
 
       h2 {
-        color: #444;
-        margin-top: 40px;
-        margin-bottom: 10px;
+        font-size: 20px;
+        margin: 40px 0 16px;
+        font-weight: 600;
       }
 
-      table {
+      /* =======================
+         PRICING TABLE
+      ======================= */
+      .table {
         width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 40px;
+        border-collapse: separate;
+        border-spacing: 0 12px;
       }
 
-      th,
-      td {
-        border: 1px solid #ccc;
-        padding: 12px;
-        text-align: center;
+      .table tr {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
       }
 
-      th {
-        background-color: #f0f0f0;
+      .table td {
+        padding: 16px;
+        font-size: 14px;
       }
 
       .highlight {
-        background-color: #d6ffe5;
-        font-weight: bold;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* =======================
+         COMPARISON TABLE (FIXED)
+      ======================= */
+
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+      }
+
+      .compare-table {
+        min-width: 900px;
+      }
+
+      .compare-header {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        padding: 12px 16px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .compare-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        margin-top: 10px;
+        backdrop-filter: blur(12px);
+        transition: 0.2s ease;
+      }
+
+      .compare-row:hover {
+        transform: translateY(-2px);
+      }
+
+      /* scrollbar */
+      .table-scroll::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .table-scroll::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+
+      /* =======================
+         LIST SECTION
+      ======================= */
+
+      ul {
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      ul li {
+        background: var(--card);
+        margin-bottom: 10px;
+        padding: 14px 16px;
+        border-radius: var(--radius);
+        border: 1px solid var(--card-border);
       }
 
       .note {
-        background: #fff3cd;
-        border: 1px solid #ffeeba;
-        padding: 10px;
         margin-top: 20px;
-        border-radius: 5px;
+        padding: 18px;
+        border-radius: var(--radius);
+        background: rgba(251, 191, 36, 0.08);
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        color: var(--muted);
       }
 
       footer {
         text-align: center;
-        padding: 20px;
-        background: #222;
-        color: #fff;
+        padding: 24px;
         margin-top: 40px;
-      }
-
-      @media (max-width: 768px) {
-        table,
-        thead,
-        tbody,
-        th,
-        td,
-        tr {
-          display: block;
-        }
-
-        th {
-          display: none;
-        }
-
-        td {
-          border: none;
-          position: relative;
-          padding-left: 50%;
-          text-align: left;
-        }
-
-        td::before {
-          position: absolute;
-          top: 12px;
-          left: 12px;
-          font-weight: bold;
-          color: #555;
-        }
+        background: rgba(255, 255, 255, 0.03);
+        border-top: 1px solid var(--card-border);
       }
     </style>
   </head>
 
   <body>
+    <header>
+      <h1>#GANG Pricing</h1>
+    </header>
+
     <div class="container">
-      <h2>✅ Static Website Services & Pricing</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Service</th>
-            <th>#GANG Price</th>
-          </tr>
-        </thead>
+      <h2>Static Website Services & Pricing</h2>
+
+      <table class="table">
         <tbody>
-          <tr class="highlight">
+          <tr>
             <td>Initial Website Setup + Hosting (5 Pages + 50 hrs support)</td>
-            <td>₹5,000 / year</td>
+            <td class="highlight">₹5,000 / year</td>
           </tr>
           <tr>
             <td>Extra Support (per hour)</td>
@@ -144,108 +202,97 @@
         </tbody>
       </table>
 
-      <h2>🆚 Competitor Comparison</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Service</th>
-            <th>#GANG</th>
-            <th>Zoho</th>
-            <th>GoDaddy</th>
-            <th>Namecheap</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Initial Website Setup + Hosting (5 Pages)</td>
-            <td class="highlight">₹5,000</td>
-            <td>₹2,100–₹7,200 (DIY only)</td>
-            <td>₹3,000–₹7,000 (DIY only)</td>
-            <td>₹4,000–₹8,000 (DIY or reseller)</td>
-          </tr>
-          <tr>
-            <td>Hosting Renewal (per year)</td>
-            <td class="highlight">₹1,500</td>
-            <td>₹2,500+</td>
-            <td>₹2,400–₹7,200</td>
-            <td>₹2,000–₹4,000</td>
-          </tr>
-          <tr>
-            <td>Email Setup (1 yr)</td>
-            <td class="highlight">₹100</td>
-            <td>₹700/year</td>
-            <td>₹350–₹450/year</td>
-            <td>₹300+ / year</td>
-          </tr>
-          <tr>
-            <td>Email Renewal</td>
-            <td class="highlight">₹50</td>
-            <td>₹700/year</td>
-            <td>₹350–₹450/year</td>
-            <td>₹300–₹600/year</td>
-          </tr>
-          <tr>
-            <td>Website Design / Setup Support</td>
-            <td class="highlight">✅ Included (50 hrs)</td>
-            <td>❌ Not Included (DIY Only)</td>
-            <td>❌ Not Included (DIY Only)</td>
-            <td>❌ Not Included (DIY Only)</td>
-          </tr>
-          <tr>
-            <td>Support / Hour (After Setup)</td>
-            <td class="highlight">₹100</td>
-            <td>❌ Not Offered</td>
-            <td>❌ Not Offered</td>
-            <td>❌ Not Offered</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Competitor Comparison</h2>
 
-      <h2>📌 Why Choose #GANG?</h2>
+      <div class="table-scroll">
+        <div class="compare-table">
+          <div class="compare-header">
+            <div>Service</div>
+            <div>#GANG</div>
+            <div>Zoho</div>
+            <div>GoDaddy</div>
+            <div>Namecheap</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Initial Website Setup + Hosting (5 Pages)</div>
+            <div class="highlight">₹5,000</div>
+            <div>₹2,100–₹7,200 (DIY only)</div>
+            <div>₹3,000–₹7,000 (DIY only)</div>
+            <div>₹4,000–₹8,000 (DIY or reseller)</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Hosting Renewal (per year)</div>
+            <div class="highlight">₹1,500</div>
+            <div>₹2,500+</div>
+            <div>₹2,400–₹7,200</div>
+            <div>₹2,000–₹4,000</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Email Setup (1 yr)</div>
+            <div class="highlight">₹100</div>
+            <div>₹700/year</div>
+            <div>₹350–₹450/year</div>
+            <div>₹300+/year</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Email Renewal</div>
+            <div class="highlight">₹50</div>
+            <div>₹700/year</div>
+            <div>₹350–₹450/year</div>
+            <div>₹300+/year</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Website Design / Setup Support</div>
+            <div class="highlight">Included (50 hrs)</div>
+            <div>Not Included (DIY Only)</div>
+            <div>Not Included (DIY Only)</div>
+            <div>Not Included (DIY Only)</div>
+          </div>
+
+          <div class="compare-row">
+            <div>Support / Hour (After Setup)</div>
+            <div class="highlight">₹100/hr</div>
+            <div>Not Offered</div>
+            <div>Not Offered</div>
+            <div>Not Offered</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Why Choose #GANG?</h2>
+
       <ul>
-        <li>✅ Affordable pricing tailored for small businesses & startups</li>
-        <li>
-          ✅
-          <strong
-            >We handle everything – you don’t need to build the site
-            yourself</strong
-          >
-        </li>
-        <li>
-          ✅ 50 hours of support included in first year (design + changes)
-        </li>
-        <li>✅ Pay-as-you-go support at just ₹100/hr</li>
-        <li>✅ Transparent pricing — no hidden fees</li>
-        <li>✅ Fast, responsive, secure static websites</li>
-        <li>✅ Email setup & support at 1/5th the cost of big brands</li>
+        <li>Affordable pricing for startups & small businesses</li>
+        <li>We handle everything — no technical work needed</li>
+        <li>50 hours free support in first year</li>
+        <li>Pay-as-you-go support at just ₹100/hr</li>
+        <li>Transparent pricing, no hidden fees</li>
+        <li>Fast, responsive, modern static websites</li>
+        <li>Email setup & support at 1/5th the cost of big brands</li>
       </ul>
 
       <div class="note">
-        <strong>Note:</strong>
-        <ul>
-          <li>
-            Pricing mentioned above is for websites built using
-            <strong>our pre-designed template library</strong>.
-          </li>
-          <li>
-            Domain registration/renewal charges are additional. Clients can
-            register on their own or we can assist.
-          </li>
-        </ul>
+        <strong>Note:</strong> Domain costs are separate and not included.
       </div>
     </div>
 
     <!-- FOOTER LOAD START -->
     <div id="footer"></div>
     <!-- FOOTER LOAD END -->
+
+    <script>
+      // FOOTER LOAD START
+      async function loadComponent(id, file) {
+        const res = await fetch(file);
+        document.getElementById(id).innerHTML = await res.text();
+      }
+      loadComponent("footer", "footer.html");
+      // FOOTER LOAD END
+    </script>
   </body>
 </html>
-<script>
-  // FOOTER LOAD START
-  async function loadComponent(id, file) {
-    const res = await fetch(file);
-    document.getElementById(id).innerHTML = await res.text();
-  }
-  loadComponent("footer", "footer.html");
-  // FOOTER LOAD END
-</script>
