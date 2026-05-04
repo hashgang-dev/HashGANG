@@ -5,103 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internship Opportunity</title>
 
-    <!-- Google Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
       :root {
-        --primary: #470470;
-        --secondary: #7b2cbf;
-        --light-bg: #f6f7fb;
-        --card-bg: #ffffff;
-        --text-dark: #333;
-        --text-light: #666;
+        --bg1: #0f0f14;
+        --bg2: #1b1430;
+        --card: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --text: #eaeaf0;
+        --muted: rgba(234, 234, 240, 0.7);
+        --primary: #8b5cf6;
+        --secondary: #a855f7;
+        --radius: 18px;
       }
 
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
         font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #f3e8f9, #f9f9f9);
-        color: var(--text-dark);
+        background: radial-gradient(circle at top, var(--bg2), var(--bg1) 60%);
+        color: var(--text);
         line-height: 1.7;
-        padding: 30px 15px;
       }
 
+      /* CONTAINER */
       .container {
-        max-width: 1000px;
+        max-width: 1050px;
         margin: auto;
-        background: var(--card-bg);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-        animation: fadeIn 0.8s ease-in-out;
+        padding: 40px 16px;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Header */
+      /* HEADER */
       .header {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-        padding: 40px 30px;
         text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.2),
+          rgba(168, 85, 247, 0.1)
+        );
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(12px);
       }
 
       .header h1 {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: 700;
       }
 
       .header p {
-        font-size: 1rem;
-        opacity: 0.95;
+        margin-top: 8px;
+        color: var(--muted);
       }
 
-      /* Content */
-      .content {
-        padding: 40px 35px;
-      }
-
+      /* HIGHLIGHT */
       .highlight {
-        background: #f3e8f9;
-        border-left: 6px solid var(--primary);
-        padding: 15px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        margin-bottom: 35px;
+        background: rgba(139, 92, 246, 0.15);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        padding: 14px 18px;
+        border-radius: var(--radius);
+        font-weight: 500;
+        margin: 25px 0;
+      }
+
+      /* CARD */
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius);
+        padding: 24px;
+        margin-bottom: 18px;
+        transition: 0.25s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-3px);
       }
 
       h2 {
-        font-size: 1.4rem;
-        color: var(--primary);
-        margin-bottom: 15px;
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: #ffffff;
         display: flex;
-        align-items: center;
         gap: 8px;
-      }
-
-      .card {
-        background: var(--light-bg);
-        border-radius: 12px;
-        padding: 25px 25px;
-        margin-bottom: 25px;
+        align-items: center;
       }
 
       ul {
@@ -110,194 +106,196 @@
 
       ul li {
         margin-bottom: 10px;
-        color: var(--text-light);
+        color: var(--muted);
+      }
+
+      p {
+        color: var(--muted);
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      strong {
+        color: #fff;
       }
 
       /* CTA */
       .cta {
         text-align: center;
-        padding: 35px 20px 45px;
-        background: linear-gradient(135deg, #faf5ff, #ffffff);
+        padding: 50px 20px;
       }
 
       .apply-button {
         display: inline-block;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #fff;
-        padding: 14px 36px;
-        font-size: 1.1rem;
-        border-radius: 50px;
-        text-decoration: none;
+        padding: 14px 38px;
+        font-size: 16px;
         font-weight: 600;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        box-shadow: 0 8px 20px rgba(71, 4, 112, 0.3);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+        transition: 0.25s ease;
       }
 
       .apply-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(71, 4, 112, 0.4);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px rgba(139, 92, 246, 0.5);
       }
 
-      /* Responsive */
+      /* RESPONSIVE */
       @media (max-width: 768px) {
         .header h1 {
-          font-size: 1.7rem;
+          font-size: 24px;
         }
 
-        .content {
-          padding: 30px 20px;
+        .card {
+          padding: 18px;
         }
 
-        h2 {
-          font-size: 1.2rem;
+        .container {
+          padding: 25px 14px;
         }
       }
     </style>
   </head>
 
   <body>
+    <!-- HEADER -->
+    <div class="header">
+      <h1>💼 Internship Opportunity</h1>
+      <p>For Degree / Engineering / Graduation Students</p>
+    </div>
+
     <div class="container">
-      <!-- Header -->
-      <div class="header">
-        <h1>💼 Internship Opportunity</h1>
-        <p><strong>For Degree / Engineering / Graduation Students</strong></p>
+      <div class="highlight">🚀 No bonds. No fees. Just mutual commitment.</div>
+
+      <div class="card">
+        <h2>📌 Overview</h2>
+        <ul>
+          <li>
+            Work on <strong>real-time projects</strong> under mentorship and
+            guidance
+          </li>
+          <li>
+            Focused on
+            <strong>skill development and practical learning</strong>
+          </li>
+          <li>
+            Remote internship (availability during agreed working hours
+            required)
+          </li>
+        </ul>
       </div>
 
-      <!-- Main Content -->
-      <div class="content">
-        <div class="highlight">
-          🚀 No bonds. No fees. Just mutual commitment.
-        </div>
-
-        <div class="card">
-          <h2>📌 Overview</h2>
-          <ul>
-            <li>
-              Work on <strong>real-time projects</strong> under mentorship and
-              guidance
-            </li>
-            <li>
-              Focused on
-              <strong>skill development and practical learning</strong>
-            </li>
-            <li>
-              Remote internship (availability during agreed working hours
-              required)
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>⏳ Duration & Commitment</h2>
-          <ul>
-            <li><strong>Total Duration:</strong> 6–10 months</li>
-            <li><strong>Mode:</strong> Part-time / Full-time</li>
-            <li><strong>Daily Commitment:</strong> 4–8 hours/day</li>
-          </ul>
-          <p>
-            ⚠️ This 1200 hours internship is primarily educational. Tasks are
-            designed for learning, not as replacement for employment.
-          </p>
-          <p>
-            ⚠️ Relieving will be provided if you receive an employment offer
-            from another company. The internship certificate will be provided
-            only for the period you have completed.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>📚 Training & Mentorship</h2>
-          <ul>
-            <li>Structured guidance from assigned mentors</li>
-            <li>Self-learning supported with resources and supervision</li>
-            <li>Clear learning outcomes defined at the start</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>💰 Compensation Model</h2>
-          <ul>
-            <li><strong>Virtual equity only</strong></li>
-            <li>Equity allocated purely on performance</li>
-            <li>
-              Buyback or realization only once the company generates revenue
-            </li>
-          </ul>
-          <p>
-            ⚠️ This is an educational internship. No monetary stipend is
-            provided.
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>📊 Performance & Evaluation</h2>
-          <ul>
-            <li>Daily performance evaluation</li>
-            <li>Regular feedback and progress tracking</li>
-            <li>
-              Internship may be
-              <strong>terminated if learning objectives are not met</strong>
-            </li>
-            <li>
-              Certificate or virtual equity provided only after successful
-              completion of the internship
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>👨‍🏫 Mentorship & Support</h2>
-          <ul>
-            <li>Assigned mentor for every intern</li>
-            <li>Guidance, learning resources, and project supervision</li>
-            <li>Learning-focused environment</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h2>⚖️ Legal Position</h2>
-          <ul>
-            <li>
-              Explicitly framed as a
-              <strong>“training/educational internship”</strong>
-            </li>
-            <li>
-              Interns are <strong>not employees</strong>; participation is
-              voluntary
-            </li>
-            <li>
-              Completion and rewards are based on
-              <strong>learning outcomes</strong>, not employment
-            </li>
-          </ul>
-        </div>
+      <div class="card">
+        <h2>⏳ Duration & Commitment</h2>
+        <ul>
+          <li><strong>Total Duration:</strong> 6–10 months</li>
+          <li><strong>Mode:</strong> Part-time / Full-time</li>
+          <li><strong>Daily Commitment:</strong> 4–8 hours/day</li>
+        </ul>
+        <p>
+          ⚠️ This 1200 hours internship is primarily educational. Tasks are
+          designed for learning, not as replacement for employment.
+        </p>
+        <p>
+          ⚠️ Relieving will be provided if you receive an employment offer from
+          another company. The internship certificate will be provided only for
+          the period you have completed.
+        </p>
       </div>
 
-      <!-- Call To Action -->
-      <div class="cta">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfToSNZEyYn8nsM5Jp77lpmmobPNYj51b2EUDt6kIHtdXMg9A/viewform"
-          target="_blank"
-          class="apply-button"
-        >
-          🚀 Apply Now
-        </a>
+      <div class="card">
+        <h2>📚 Training & Mentorship</h2>
+        <ul>
+          <li>Structured guidance from assigned mentors</li>
+          <li>Self-learning supported with resources and supervision</li>
+          <li>Clear learning outcomes defined at the start</li>
+        </ul>
       </div>
+
+      <div class="card">
+        <h2>💰 Compensation Model</h2>
+        <ul>
+          <li><strong>Virtual equity only</strong></li>
+          <li>Equity allocated purely on performance</li>
+          <li>
+            Buyback or realization only once the company generates revenue
+          </li>
+        </ul>
+        <p>
+          ⚠️ This is an educational internship. No monetary stipend is provided.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>📊 Performance & Evaluation</h2>
+        <ul>
+          <li>Daily performance evaluation</li>
+          <li>Regular feedback and progress tracking</li>
+          <li>
+            Internship may be
+            <strong>terminated if learning objectives are not met</strong>
+          </li>
+          <li>
+            Certificate or virtual equity provided only after successful
+            completion of the internship
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>👨‍🏫 Mentorship & Support</h2>
+        <ul>
+          <li>Assigned mentor for every intern</li>
+          <li>Guidance, learning resources, and project supervision</li>
+          <li>Learning-focused environment</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>⚖️ Legal Position</h2>
+        <ul>
+          <li>
+            Explicitly framed as a
+            <strong>“training/educational internship”</strong>
+          </li>
+          <li>
+            Interns are <strong>not employees</strong>; participation is
+            voluntary
+          </li>
+          <li>
+            Completion and rewards are based on
+            <strong>learning outcomes</strong>, not employment
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Call To Action -->
+    <div class="cta">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfToSNZEyYn8nsM5Jp77lpmmobPNYj51b2EUDt6kIHtdXMg9A/viewform"
+        target="_blank"
+        class="apply-button"
+      >
+        🚀 Apply Now
+      </a>
     </div>
 
     <!-- FOOTER LOAD START -->
     <div id="footer"></div>
     <!-- FOOTER LOAD END -->
+
+    <script>
+      // FOOTER LOAD START
+      async function loadComponent(id, file) {
+        const res = await fetch(file);
+        document.getElementById(id).innerHTML = await res.text();
+      }
+      loadComponent("footer", "footer.html");
+      // FOOTER LOAD END
+    </script>
   </body>
 </html>
-<script>
-  // FOOTER LOAD START
-  async function loadComponent(id, file) {
-    const res = await fetch(file);
-    document.getElementById(id).innerHTML = await res.text();
-  }
-  loadComponent("footer", "footer.html");
-  // FOOTER LOAD END
-</script>
