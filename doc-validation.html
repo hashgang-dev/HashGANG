@@ -115,13 +115,6 @@
   </head>
 
   <body>
-    <header>
-      <div class="logo-container">
-        <img src="img/logoGIF-v3.gif" alt="Logo" class="logo" />
-        <div class="company-name">HashGANG</div>
-      </div>
-    </header>
-
     <main>
       <div class="card">
         <h1>Verify Certificate</h1>
@@ -136,7 +129,19 @@
       </div>
     </main>
 
+    <!-- FOOTER LOAD START -->
+    <div id="footer"></div>
+    <!-- FOOTER LOAD END -->
+
     <script>
+      // FOOTER LOAD START
+      async function loadComponent(id, file) {
+        const res = await fetch(file);
+        document.getElementById(id).innerHTML = await res.text();
+      }
+      loadComponent("footer", "footer.html");
+      // FOOTER LOAD END
+
       const documents = {
         "HRD/INT-P/251006004": {
           data: `

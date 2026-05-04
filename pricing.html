@@ -111,12 +111,8 @@
   </head>
 
   <body>
-    <header>
-      <h1>#GANG - Static Website Services & Pricing</h1>
-    </header>
-
     <div class="container">
-      <h2>✅ Our Pricing</h2>
+      <h2>✅ Static Website Services & Pricing</h2>
       <table>
         <thead>
           <tr>
@@ -239,6 +235,17 @@
       </div>
     </div>
 
-    <footer>Copyright &copy; 2026 HashGANG (#GANG)</footer>
+    <!-- FOOTER LOAD START -->
+    <div id="footer"></div>
+    <!-- FOOTER LOAD END -->
   </body>
 </html>
+<script>
+  // FOOTER LOAD START
+  async function loadComponent(id, file) {
+    const res = await fetch(file);
+    document.getElementById(id).innerHTML = await res.text();
+  }
+  loadComponent("footer", "footer.html");
+  // FOOTER LOAD END
+</script>
