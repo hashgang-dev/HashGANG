@@ -20,6 +20,7 @@
         min-height: 100vh;
       }
 
+      /* HEADER */
       header {
         background: linear-gradient(135deg, #470470, #9911ee);
         color: white;
@@ -47,23 +48,69 @@
         font-weight: bold;
       }
 
+      /* NAV */
       nav {
         display: flex;
         gap: 15px;
+        align-items: center;
+        overflow: visible;
       }
 
-      nav a {
+      nav a,
+      .dropdown-toggle {
         color: white;
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 4px;
-        transition: background-color 0.3s;
+        font-size: 14px;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background 0.3s;
       }
 
-      nav a:hover {
-        background-color: #555;
+      nav a:hover,
+      .dropdown-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.15);
       }
 
+      /* DROPDOWN WRAPPER */
+      .nav-item {
+        position: relative;
+      }
+
+      /* DROPDOWN MENU (DESKTOP) */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        min-width: 200px;
+        background: linear-gradient(135deg, #470470, #9911ee);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        display: none;
+        flex-direction: column;
+
+        z-index: 9999;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .dropdown-menu a {
+        padding: 10px 14px;
+        color: white;
+      }
+
+      .dropdown-menu a:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .dropdown.open .dropdown-menu {
+        display: flex;
+      }
+
+      /* MOBILE MENU BUTTON */
       .menu-toggle {
         display: none;
         font-size: 1.8em;
@@ -73,12 +120,15 @@
         top: 10px;
       }
 
+      /* MOBILE */
       @media (max-width: 768px) {
         nav {
           flex-direction: column;
           width: 100%;
           display: none;
           margin-top: 10px;
+          align-items: center;
+          text-align: center;
         }
 
         nav.show {
@@ -89,13 +139,18 @@
           display: block;
         }
 
-        header {
-          flex-direction: row;
-          align-items: center;
+        .nav-item,
+        nav a,
+        .dropdown-toggle {
+          width: 100%;
+          text-align: center;
         }
 
-        .logo-container {
-          flex-grow: 1;
+        /* MOBILE DROPDOWN */
+        .dropdown-menu {
+          position: relative;
+          width: 100%;
+          margin-top: 6px;
         }
       }
 
@@ -104,7 +159,6 @@
         border: none;
         width: 100%;
         height: calc(100vh - 70px);
-        /* Adjust for header height */
       }
 
       .whatsapp-float {
@@ -182,6 +236,17 @@
       <nav id="mainMenu">
         <a href="home.html#infinite" target="contentFrame">Home</a>
         <a href="home.html#whatwedo" target="contentFrame">What We Do</a>
+
+        <!-- DROPDOWN -->
+        <!-- <div class="nav-item dropdown">
+          <a class="dropdown-toggle">Solutions ▾</a>
+          <div class="dropdown-menu">
+            <a href="careers.html" target="contentFrame">Team Leader</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div> -->
+
         <a href="home.html#testimonials" target="contentFrame">Social Impact</a>
         <a href="home.html#gallery" target="contentFrame">About Us</a>
         <a href="home.html#contact" target="contentFrame">Contact</a>
@@ -191,9 +256,7 @@
       </nav>
     </header>
 
-    <iframe name="contentFrame" src="home.html#infinite" title="Embedded Page">
-      Your browser does not support iframes.
-    </iframe>
+    <iframe name="contentFrame" src="home.html#infinite"></iframe>
 
     <a
       href="https://wa.me/919133385950?text=Hi%20%23GANG"
@@ -216,20 +279,45 @@
 
     <script>
       function toggleMenu() {
-        const menu = document.getElementById("mainMenu");
-        menu.classList.toggle("show");
+        document.getElementById("mainMenu").classList.toggle("show");
       }
 
-      // Close menu after clicking a menu item (on mobile)
       document.addEventListener("DOMContentLoaded", () => {
-        const menuLinks = document.querySelectorAll("#mainMenu a");
         const menu = document.getElementById("mainMenu");
 
-        menuLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            // Only close menu if it's visible (mobile)
-            if (window.innerWidth <= 768 && menu.classList.contains("show")) {
+        // TOGGLE DROPDOWN
+        document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const parent = this.parentElement;
+
+            document.querySelectorAll(".dropdown").forEach((d) => {
+              if (d !== parent) d.classList.remove("open");
+            });
+
+            parent.classList.toggle("open");
+          });
+        });
+
+        // CLOSE MENU ON LINK CLICK
+        document
+          .querySelectorAll("#mainMenu a:not(.dropdown-toggle)")
+          .forEach((link) => {
+            link.addEventListener("click", () => {
               menu.classList.remove("show");
+              document
+                .querySelectorAll(".dropdown")
+                .forEach((d) => d.classList.remove("open"));
+            });
+          });
+
+        // OUTSIDE CLICK CLOSE
+        document.addEventListener("click", (e) => {
+          document.querySelectorAll(".dropdown").forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("open");
             }
           });
         });
