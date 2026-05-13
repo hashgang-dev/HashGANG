@@ -37,16 +37,39 @@
   </head>
 
   <body>
+    <!-- <div id="header"></div> -->
     <main class="container">
       <article class="blog-post">
         <!-- BREADCRUMB -->
         <div class="breadcrumb">
-          <a href="/home.html">Home</a>
+          <a id="homeLink">Home</a>
           <span>/</span>
           <a href="/blog/">Blog</a>
           <span>/</span>
           <span>Performance</span>
         </div>
+        <script>
+          const homeLink = document.getElementById("homeLink");
+
+          // iframe lo load ayithe home.html
+          // direct blog URL open chesthe index.html
+          if (window.self !== window.top) {
+            // iframe
+            homeLink.href = "/home.html";
+          } else {
+            // direct page access
+            homeLink.href = "/index.html";
+          }
+        </script>
+        <!-- <script>
+          if (window.self === window.top) {
+            fetch("../header.html")
+              .then((res) => res.text())
+              .then((data) => {
+                document.getElementById("header").innerHTML = data;
+              });
+          }
+        </script> -->
 
         <!-- HEADER -->
         <header class="post-header">
