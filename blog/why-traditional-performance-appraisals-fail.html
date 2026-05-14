@@ -34,10 +34,97 @@
     />
 
     <link rel="stylesheet" href="./assets/css/post.css" />
+
+    <style>
+      .menu-float {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #470470;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 1000;
+        cursor: pointer;
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease;
+      }
+
+      /* Icon */
+      .menu-float svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      /* Hover lift effect */
+      .menu-float:hover {
+        transform: translateY(-5px) scale(1.1);
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: absolute;
+        right: 70px;
+        background-color: #333;
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 5px;
+        font-size: 13px;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: 0.3s;
+      }
+
+      /* Show tooltip on hover */
+      .menu-float:hover .tooltip {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* Pulse animation */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- <div id="header"></div> -->
+    <a id="homeBtn" href="/" class="menu-float" rel="noopener">
+      <span class="tooltip">Home</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="white"
+        class="w-7 h-7"
+      >
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+      </svg>
+    </a>
+    <script>
+      const homeBtn = document.getElementById("homeBtn");
+
+      // iframe lo unte hide
+      if (window.self !== window.top) {
+        homeBtn.style.display = "none";
+      } else {
+        // direct URL aythe show
+        homeBtn.style.display = "flex"; // or block
+      }
+    </script>
+
     <main class="container">
       <article class="blog-post">
         <!-- BREADCRUMB -->
@@ -61,15 +148,6 @@
             homeLink.href = "/index.html";
           }
         </script>
-        <!-- <script>
-          if (window.self === window.top) {
-            fetch("../header.html")
-              .then((res) => res.text())
-              .then((data) => {
-                document.getElementById("header").innerHTML = data;
-              });
-          }
-        </script> -->
 
         <!-- HEADER -->
         <header class="post-header">
