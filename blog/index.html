@@ -2,8 +2,68 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic SEO -->
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      HashGANG Insights | Productivity, Team Management & Performance Blogs
+    </title>
+
+    <meta
+      name="description"
+      content="Explore HashGANG Insights for articles on productivity, workforce management, continuous performance evaluation, project execution, SaaS platforms, and modern team collaboration."
+    />
+
+    <meta
+      name="keywords"
+      content="HashGANG blog, productivity blog, workforce management, team performance, employee productivity, project management, SaaS insights, HR technology, continuous evaluation, modern teams"
+    />
+
+    <meta name="author" content="HASHGANG SOLUTIONS PRIVATE LIMITED" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://hashgang.com/blog/" />
+
+    <!-- Open Graph SEO -->
+    <meta
+      property="og:title"
+      content="HashGANG Insights | Productivity & Performance Blogs"
+    />
+    <meta
+      property="og:description"
+      content="Insights on productivity, performance management, workforce systems, project execution, and modern teams."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hashgang.com/blog/" />
+    <meta
+      property="og:image"
+      content="https://hashgang.com/img/logoGIF-v2.gif"
+    />
+    <meta property="og:site_name" content="HashGANG" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter SEO -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="HashGANG Insights | Productivity & Performance Blogs"
+    />
+    <meta
+      name="twitter:description"
+      content="Read articles on productivity, workforce systems, project management, and continuous performance evaluation."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hashgang.com/img/logoGIF-v2.gif"
+    />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#470470" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -12,13 +72,28 @@
       rel="stylesheet"
     />
 
-    <title>HashGang Insights</title>
-    <meta
-      name="description"
-      content="Insights on productivity, performance management, workforce systems, and modern teams."
-    />
-
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/blog.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "HashGANG Insights",
+        "description": "Insights on productivity, workforce management, continuous evaluation, project execution, and modern teams.",
+        "url": "https://hashgang.com/blog/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HASHGANG SOLUTIONS PRIVATE LIMITED",
+          "url": "https://hashgang.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hashgang.com/img/logoGIF-v2.gif"
+          }
+        }
+      }
+    </script>
 
     <style>
       .menu-float {
@@ -85,18 +160,45 @@
       }
     </style>
   </head>
+
   <body>
-    <a id="homeBtn" href="/" class="menu-float" rel="noopener">
+    <!-- Accessibility -->
+    <a
+      href="#main-content"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      "
+    >
+      Skip to content
+    </a>
+
+    <!-- Floating Home Button -->
+    <a
+      id="homeBtn"
+      href="/"
+      class="menu-float"
+      rel="noopener"
+      aria-label="Go to HashGANG Home Page"
+      title="Home"
+    >
       <span class="tooltip">Home</span>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="white"
         class="w-7 h-7"
+        aria-hidden="true"
       >
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </svg>
     </a>
+
     <script>
       const homeBtn = document.getElementById("homeBtn");
 
@@ -110,7 +212,7 @@
     </script>
 
     <!-- HERO -->
-    <section class="hero">
+    <header class="hero">
       <div class="container">
         <p class="hero-tag">HASHGANG INSIGHTS</p>
 
@@ -118,20 +220,25 @@
 
         <p class="hero-subtitle">
           Articles on workforce management, continuous evaluation, project
-          execution, and team productivity.
+          execution, SaaS platforms, and team productivity.
         </p>
       </div>
-    </section>
+    </header>
 
     <!-- BLOG LIST -->
-    <main class="container">
-      <section class="blog-section">
+    <main id="main-content" class="container">
+      <section class="blog-section" aria-labelledby="blog-section-heading">
+        <h2 id="blog-section-heading" style="position: absolute; left: -9999px">
+          Latest Blog Articles
+        </h2>
+
         <div id="blog-list" class="blog-grid">
           <!-- Dynamic blog cards render here -->
         </div>
       </section>
     </main>
 
+    <!-- Blog Script -->
     <script src="./assets/js/blog.js"></script>
   </body>
 </html>
