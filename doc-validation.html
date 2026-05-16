@@ -3,12 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#GANG - Document Verification</title>
 
+    <!-- SEO PRIMARY -->
+    <title>
+      Certificate Verification | HashGANG Internship & Training Documents
+    </title>
+
+    <meta
+      name="description"
+      content="Verify internship certificates and training documents issued by HashGANG Solutions Private Limited. Secure online certificate validation portal."
+    />
+
+    <meta
+      name="keywords"
+      content="HashGANG certificate verification, internship certificate verification, document verification, internship validation, training certificate, HashGANG Solutions"
+    />
+
+    <meta name="author" content="HashGANG Solutions Private Limited" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://hashgang.com/doc-validation.html" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Certificate Verification | HashGANG" />
+    <meta
+      property="og:description"
+      content="Verify internship and training certificates issued by HashGANG Solutions Private Limited."
+    />
+    <meta
+      property="og:image"
+      content="https://hashgang.com/img/logoGIF-v3.gif"
+    />
+    <meta
+      property="og:url"
+      content="https://hashgang.com/doc-validation.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Certificate Verification | HashGANG" />
+    <meta
+      name="twitter:description"
+      content="Online certificate and internship document verification portal by HashGANG."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hashgang.com/img/logoGIF-v3.gif"
+    />
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="language" content="English" />
+
+    <!-- PERFORMANCE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Certificate Verification",
+        "url": "https://hashgang.com/doc-validation.html",
+        "description": "Official document and internship certificate verification portal for HashGANG Solutions Private Limited.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HashGANG Solutions Private Limited",
+          "url": "https://hashgang.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hashgang.com/img/logoGIF-v3.gif"
+          }
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HashGANG Solutions Private Limited",
+        "url": "https://hashgang.com",
+        "logo": "https://hashgang.com/img/logoGIF-v3.gif",
+        "sameAs": [
+          "https://www.facebook.com/hashgangsolutions",
+          "https://in.linkedin.com/company/hashgang-solutions-private-limited",
+          "https://www.instagram.com/hashgang.says/"
+        ]
+      }
+    </script>
 
     <style>
       :root {
@@ -166,7 +262,13 @@
       <div class="card">
         <h1>Verify Certificate</h1>
 
-        <input type="text" id="docInput" placeholder="Enter Certificate No" />
+        <input
+          type="text"
+          id="docInput"
+          placeholder="Enter Certificate No"
+          aria-label="Certificate Number"
+        />
+
         <button onclick="verifyDoc()">Verify</button>
 
         <div id="result" class="doc-details"></div>
@@ -214,6 +316,7 @@
         </p>
     `,
         },
+
         "HRD/INT-P/251006002": {
           data: `
       <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
@@ -241,6 +344,7 @@
         </p>
     `,
         },
+
         "HRD/INT-P/251006003": {
           data: `
       <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
@@ -268,6 +372,7 @@
         </p>
     `,
         },
+
         "HRD/INT-P/251006004": {
           data: `
       <p style="margin-top: 10px; font-size: 16px; line-height: 1.6;">
