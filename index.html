@@ -3,9 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#GANG</title>
-    <!-- Favicon -->
+
+    <!-- SEO PRIMARY -->
+    <title>
+      HashGANG | Web Development, Digital Solutions & Business Automation
+    </title>
+
+    <meta
+      name="description"
+      content="HashGANG provides modern web development, digital solutions, team management systems, and business automation services in India."
+    />
+
+    <meta name="author" content="HashGANG" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://hashgang.com/" />
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="HashGANG - Digital Solutions & Web Development"
+    />
+    <meta
+      property="og:description"
+      content="Modern IT solutions, automation systems & web development services."
+    />
+    <meta
+      property="og:image"
+      content="https://hashgang.com/img/infinite-loop-01.jpg"
+    />
+    <meta property="og:url" content="https://hashgang.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HashGANG" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HashGANG" />
+    <meta
+      name="twitter:description"
+      content="Digital solutions & web development company."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hashgang.com/img/infinite-loop-01.jpg"
+    />
+    <meta name="theme-color" content="#470470" />
+    <meta name="language" content="English" />
+
+    <!-- PERFORMANCE -->
+    <link rel="preload" as="image" href="img/logoGIF-v3.gif" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "HashGANG",
+        "url": "https://hashgang.com",
+        "logo": "https://hashgang.com/img/logoGIF-v3.gif",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9133385950",
+          "contactType": "customer support",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "availableLanguage": ["English"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/hashgangsolutions",
+          "https://in.linkedin.com/company/hashgang-solutions-private-limited",
+          "https://www.instagram.com/hashgang.says/"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "HashGANG",
+        "url": "https://hashgang.com"
+      }
+    </script>
+
     <style>
       * {
         margin: 0;
@@ -227,43 +313,66 @@
   </head>
 
   <body>
-    <header>
+    <!-- HEADER -->
+    <header role="banner">
       <div class="logo-container">
-        <img src="img/logoGIF-v3.gif" alt="Logo" class="logo" />
+        <img
+          src="img/logoGIF-v3.gif"
+          alt="HashGANG Logo"
+          class="logo"
+          loading="lazy"
+        />
         <div class="company-name">HashGANG</div>
       </div>
+
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <nav id="mainMenu">
-        <a href="home.html#infinite" target="contentFrame">Home</a>
-        <a href="home.html#whatwedo" target="contentFrame">What We Do</a>
+
+      <nav id="mainMenu" aria-label="Main Navigation">
+        <a href="home.html#infinite" target="contentFrame" title="Home Page"
+          >Home</a
+        >
+        <a href="home.html#whatwedo" target="contentFrame" title="What We Do"
+          >What We Do</a
+        >
 
         <!-- DROPDOWN -->
         <div class="nav-item dropdown">
-          <a class="dropdown-toggle">Solutions ▾</a>
+          <a class="dropdown-toggle" title="Solutions Menu">Solutions ▾</a>
           <div class="dropdown-menu">
-            <a href="teamleader.html" target="contentFrame">Team Leader</a>
-            <!-- <a href="#">Item 2</a>
-            <a href="#">Item 3</a> -->
+            <a href="teamleader.html" target="contentFrame" title="Team Leader"
+              >Team Leader</a
+            >
           </div>
         </div>
 
         <!-- <a href="home.html#testimonials" target="contentFrame">Social Impact</a> -->
-        <a href="home.html#gallery" target="contentFrame">About Us</a>
-        <a href="home.html#contact" target="contentFrame">Contact</a>
-        <a href="blog/index.html" target="contentFrame">Blog</a>
+        <a href="home.html#gallery" target="contentFrame" title="About HashGANG"
+          >About Us</a
+        >
+        <a href="home.html#contact" target="contentFrame" title="Contact Us"
+          >Contact</a
+        >
+        <a href="blog/index.html" target="contentFrame" title="Read Our Blog"
+          >Blog</a
+        >
         <!-- <a href="https://templatemo.com/page/1" target="contentFrame">Templates</a> -->
-        <!-- <a href="careers.html" target="contentFrame">Careers</a> -->
-        <!-- <a href="pricing.html" target="contentFrame">Pricing</a> -->
       </nav>
     </header>
 
-    <iframe name="contentFrame" src="home.html#infinite"></iframe>
+    <!-- MAIN CONTENT -->
+    <iframe
+      name="contentFrame"
+      src="home.html#infinite"
+      title="HashGANG Content"
+    ></iframe>
 
+    <!-- WHATSAPP -->
     <a
-      href="https://wa.me/919133385950?text=Hi%20%23GANG"
+      href="https://wa.me/919133385950?text=Hi%20HashGANG"
       class="whatsapp-float"
       target="_blank"
       rel="noopener"
+      aria-label="Chat with HashGANG on WhatsApp"
     >
       <span class="tooltip">Chat with us</span>
       <svg
@@ -278,6 +387,7 @@
       </svg>
     </a>
 
+    <!-- JS -->
     <script>
       function toggleMenu() {
         document.getElementById("mainMenu").classList.toggle("show");
