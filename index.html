@@ -32,10 +32,15 @@
     </script>
 
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+
+    <!-- SECURITY META TAGS -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- SEO PRIMARY -->
     <title>
@@ -51,14 +56,17 @@
       content="HashGANG, HashGANG Chat, web development, mobile app development, software solutions, business automation, IT company"
     />
     <meta name="author" content="HashGANG" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <!-- CANONICAL -->
     <link rel="canonical" href="https://hashgang.com/" />
 
-    <!-- FAVICON -->
+    <!-- FAVICON & PRELOADS -->
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="preload" as="image" href="img/logoGIF-v3.gif" type="image/gif" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -84,6 +92,8 @@
       property="og:image"
       content="https://hashgang.com/img/infinite-loop-01.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://hashgang.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="HashGANG" />
@@ -147,6 +157,26 @@
         "applicationCategory": "CommunicationApplication",
         "url": "https://chat.hashgang.com",
         "description": "Instant messaging and real-time chat application by HashGANG."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hashgang.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "HashGANG Chat",
+            "item": "https://chat.hashgang.com/"
+          }
+        ]
       }
     </script>
 
