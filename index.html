@@ -1703,6 +1703,63 @@
       </div>
     </section>
 
+    <!-- FAQ SECTION -->
+    <section class="solutions-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">Common Questions & Answers</h2>
+          <p class="section-desc">Everything you need to know about working with HashGANG.</p>
+        </div>
+
+        <div style="max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+          <!-- FAQ Item 1 -->
+          <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:18px; padding:20px 24px; cursor:pointer;" onclick="toggleFaq(this)">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:1.1rem;">
+              <span>What services does HashGANG offer?</span>
+              <i class="fas fa-chevron-down faq-arrow" style="transition:transform 0.3s ease; color:var(--accent-pink);"></i>
+            </div>
+            <div class="faq-answer" style="display:none; margin-top:14px; color:var(--text-secondary); font-size:0.98rem; line-height:1.7; border-top:1px solid rgba(255,255,255,0.08); padding-top:12px;">
+              We specialize in custom web application development, mobile app development (Android & iOS), business automation software, live real-time platforms (like HashGANG Chat), and ongoing IT maintenance.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:18px; padding:20px 24px; cursor:pointer;" onclick="toggleFaq(this)">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:1.1rem;">
+              <span>How can I get started on a project?</span>
+              <i class="fas fa-chevron-down faq-arrow" style="transition:transform 0.3s ease; color:var(--accent-pink);"></i>
+            </div>
+            <div class="faq-answer" style="display:none; margin-top:14px; color:var(--text-secondary); font-size:0.98rem; line-height:1.7; border-top:1px solid rgba(255,255,255,0.08); padding-top:12px;">
+              Getting started is easy! Contact us directly via WhatsApp (+91 91333 85950), Call, or Email (info@hashgang.com). We will discuss your goals, outline a project roadmap, and provide a transparent quote.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:18px; padding:20px 24px; cursor:pointer;" onclick="toggleFaq(this)">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:1.1rem;">
+              <span>What is HashGANG Chat?</span>
+              <i class="fas fa-chevron-down faq-arrow" style="transition:transform 0.3s ease; color:var(--accent-pink);"></i>
+            </div>
+            <div class="faq-answer" style="display:none; margin-top:14px; color:var(--text-secondary); font-size:0.98rem; line-height:1.7; border-top:1px solid rgba(255,255,255,0.08); padding-top:12px;">
+              HashGANG Chat is our live real-time messaging application hosted at chat.hashgang.com. It allows users to connect instantly without sign-up friction, demonstrating our capability to build fast, scalable, and secure real-time software.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:18px; padding:20px 24px; cursor:pointer;" onclick="toggleFaq(this)">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:1.1rem;">
+              <span>Do you provide ongoing support and maintenance?</span>
+              <i class="fas fa-chevron-down faq-arrow" style="transition:transform 0.3s ease; color:var(--accent-pink);"></i>
+            </div>
+            <div class="faq-answer" style="display:none; margin-top:14px; color:var(--text-secondary); font-size:0.98rem; line-height:1.7; border-top:1px solid rgba(255,255,255,0.08); padding-top:12px;">
+              Yes! We offer comprehensive post-launch support, continuous updates, security monitoring, and cloud maintenance to ensure your application performs flawlessly over time.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT SECTION (DIRECT ACTION FOCUS) -->
     <section class="contact-section" id="contact">
       <div class="container">
@@ -1784,7 +1841,7 @@
             <ul class="footer-links">
               <li><a href="privacy-policy.html">Privacy Policy</a></li>
               <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-              <li><a href="sitemap.xml">Sitemap</a></li>
+              <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -1835,6 +1892,14 @@
           if (dropdown) dropdown.classList.remove("open");
         });
       });
+
+      function toggleFaq(el) {
+        const ans = el.querySelector('.faq-answer');
+        const arrow = el.querySelector('.faq-arrow');
+        const isOpen = ans && ans.style.display === 'block';
+        if (ans) ans.style.display = isOpen ? 'none' : 'block';
+        if (arrow) arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitemap | HashGANG (#GANG)</title>
+    <meta
+      name="description"
+      content="Explore all pages, products, services, and articles on the HashGANG website."
+    />
+    <link rel="canonical" href="https://hashgang.com/sitemap.html" />
+    <link rel="icon" type="image/png" href="img/logoGIF-v3.gif" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --bg-main: #080214;
+        --bg-card: rgba(255, 255, 255, 0.03);
+        --bg-card-hover: rgba(255, 255, 255, 0.06);
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --accent-purple: #8b5cf6;
+        --accent-blue: #3b82f6;
+        --accent-emerald: #10b981;
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* NAVIGATION */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(8, 2, 20, 0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-glass);
+        padding: 16px 0;
+      }
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-weight: 800;
+        font-size: 20px;
+      }
+      .brand-logo img {
+        height: 36px;
+        width: auto;
+      }
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 99px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        transition: all 0.2s ease;
+      }
+      .btn-back:hover {
+        color: var(--text-primary);
+        background: var(--bg-card-hover);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* HERO TITLE */
+      .page-header {
+        text-align: center;
+        padding: 60px 24px 40px;
+        position: relative;
+      }
+      .page-header h1 {
+        font-size: 42px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 12px;
+      }
+      .page-header p {
+        color: var(--text-secondary);
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* SITEMAP GRID */
+      .sitemap-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+        width: 100%;
+        flex: 1;
+      }
+
+      .sitemap-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+      }
+
+      .sitemap-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-glass);
+        border-radius: 20px;
+        padding: 28px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .sitemap-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border-glass);
+      }
+      .card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: rgba(139, 92, 246, 0.15);
+        color: var(--accent-purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      .card-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .link-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .link-list li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 6px 0;
+        transition: color 0.2s ease;
+      }
+      .link-list li a:hover {
+        color: var(--accent-purple);
+      }
+      .link-list li a i {
+        font-size: 12px;
+        opacity: 0.6;
+        transition: transform 0.2s ease;
+      }
+      .link-list li a:hover i {
+        opacity: 1;
+        transform: translateX(4px);
+      }
+
+      .tag-badge {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 99px;
+        background: rgba(16, 185, 129, 0.15);
+        color: var(--accent-emerald);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+      }
+
+      /* XML SITEMAP BAR */
+      .xml-sitemap-bar {
+        margin-top: 40px;
+        background: rgba(139, 92, 246, 0.05);
+        border: 1px dashed rgba(139, 92, 246, 0.3);
+        border-radius: 16px;
+        padding: 20px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .xml-text {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+      .xml-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+        text-decoration: none;
+        padding: 8px 18px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      /* FOOTER */
+      footer {
+        background: rgba(5, 2, 12, 0.95);
+        border-top: 1px solid var(--border-glass);
+        padding: 30px 24px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      @media (max-width: 600px) {
+        .page-header h1 {
+          font-size: 30px;
+        }
+        .sitemap-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="brand-logo">
+          <img src="img/logoGIF-v3.gif" alt="HashGANG Logo" />
+          <span>HashGANG</span>
+        </a>
+        <a href="index.html" class="btn-back">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+      <h1>Visual Sitemap</h1>
+      <p>A structured navigation overview of all pages, products, solutions, and resources across HashGANG.</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="sitemap-container">
+      <div class="sitemap-grid">
+        <!-- CARD 1: CORE PAGES -->
+        <div class="sitemap-card">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-compass"></i></div>
+            <div class="card-title">Main Navigation</div>
+          </div>
+          <ul class="link-list">
+            <li><a href="index.html">Home Page <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="index.html#about">About HashGANG <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="index.html#solutions">Engineering Solutions <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="index.html#contact">Contact Us <i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- CARD 2: PRODUCTS & APPS -->
+        <div class="sitemap-card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(59,130,246,0.15); color:#3b82f6;"><i class="fas fa-rocket"></i></div>
+            <div class="card-title">Products & Applications</div>
+          </div>
+          <ul class="link-list">
+            <li>
+              <a href="https://chat.hashgang.com" target="_blank" rel="noopener">
+                HashGANG Chat <span class="tag-badge">Flagship B2C</span>
+              </a>
+            </li>
+            <li><a href="myleader.html">MyLeader.app <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="pricing.html">Pricing Plans <i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- CARD 3: BLOG ARTICLES -->
+        <div class="sitemap-card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(16,185,129,0.15); color:#10b981;"><i class="fas fa-newspaper"></i></div>
+            <div class="card-title">Blog Articles</div>
+          </div>
+          <ul class="link-list">
+            <li><a href="blog/index.html">Blog Homepage <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="blog/260511-why-traditional-performance-appraisals-fail.html">Why Appraisals Fail <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="blog/260517-why-attendance-is-not-real-productivity.html">Attendance vs Productivity <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="blog/260602-why-managers-struggle-to-give-fair-performance-reviews.html">Fair Performance Reviews <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="blog/260609-why-employees-hate-surprise-performance-ratings.html">Surprise Ratings <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="blog/260626-continuous-performance-intelligence-future-of-employee-performance-management.html">Continuous Intelligence <i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- CARD 4: COMPANY & VERIFICATION -->
+        <div class="sitemap-card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(245,158,11,0.15); color:#f59e0b;"><i class="fas fa-building"></i></div>
+            <div class="card-title">Company & Trust</div>
+          </div>
+          <ul class="link-list">
+            <li><a href="careers.html">Careers <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="doc-validation.html">Verify Certificate / Document <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="culture-policy.html">Culture Policy <i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- CARD 5: LEGAL -->
+        <div class="sitemap-card">
+          <div class="card-header">
+            <div class="card-icon" style="background:rgba(239,68,68,0.15); color:#ef4444;"><i class="fas fa-shield-halved"></i></div>
+            <div class="card-title">Legal & Compliance</div>
+          </div>
+          <ul class="link-list">
+            <li><a href="privacy-policy.html">Privacy Policy <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="terms-and-conditions.html">Terms & Conditions <i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SEARCH ENGINE XML BAR -->
+      <div class="xml-sitemap-bar">
+        <div class="xml-text">
+          <i class="fas fa-code-branch" style="font-size:18px; color:var(--accent-purple);"></i>
+          <span>Are you a web crawler or developer looking for the raw XML sitemap?</span>
+        </div>
+        <a href="sitemap.xml" target="_blank" class="xml-btn">
+          <i class="fas fa-file-code"></i> View sitemap.xml
+        </a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 HashGANG (#GANG). All rights reserved.</p>
+    </footer>
+  </body>
+</html>
