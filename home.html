@@ -95,6 +95,14 @@
   <meta name="geo.region" content="IN-AP" />
   <meta name="geo.placename" content="Vijayawada, Andhra Pradesh" />
 
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <!-- PERFORMANCE -->
   <link rel="preload" as="image" href="img/logoGIF-v2.gif" />
 
@@ -105,6 +113,150 @@
   <link rel="stylesheet" href="magnific-popup/magnific-popup.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+
+  <style>
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+    }
+
+    /* HERO STYLING ENHANCEMENTS */
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      animation: floatPill 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatPill {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+
+    .hero-glow-title {
+      font-weight: 800;
+      font-size: 3.2rem;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #ffffff 0%, #f0c3fc 50%, #8ec5fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .hero-glow-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, #ff007f 0%, #7928ca 100%);
+      color: #ffffff !important;
+      font-weight: 800;
+      padding: 14px 34px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 30px rgba(255, 0, 127, 0.5);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .btn-hero-primary:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 35px rgba(255, 0, 127, 0.7);
+      background: linear-gradient(135deg, #7928ca 0%, #ff007f 100%);
+    }
+
+    .btn-hero-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: #ffffff !important;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s ease;
+      text-decoration: none !important;
+      font-size: 15px;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* SPOTLIGHT BANNER CARD */
+    .spotlight-card {
+      background: linear-gradient(135deg, rgba(71, 4, 112, 0.9) 0%, rgba(153, 17, 238, 0.8) 100%);
+      border-radius: 24px;
+      padding: 40px;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 50px rgba(71, 4, 112, 0.4);
+      position: relative;
+      overflow: hidden;
+      margin: 40px 0 20px;
+    }
+
+    .spotlight-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 0, 127, 0.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .spotlight-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .spotlight-desc {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    .feature-item-pill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  </style>
 
   <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
@@ -153,14 +305,45 @@
   <!-- Hero section -->
   <section id="infinite" class="text-white tm-font-big tm-parallax">
     <div class="text-center tm-hero-text-container">
-      <div class="tm-hero-text-container-inner">
-        <h2 class="tm-hero-title">HashGANG (#GANG)</h2>
+      <div class="tm-hero-text-container-inner container">
 
-        <p class="tm-hero-subtitle">
-        <h4>Crafting Solutions, Building Partnerships</h4>
-        <br />
-        <h3>Discuss - Develop - Deploy</h3>
+        <!-- FLOATING HERO PILL BADGE -->
+        <div class="hero-badge-pill">
+          <span style="color:#00ffaa;">●</span> INTRODUCING HASHGANG CHAT APP
+          <a
+            href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=hero_pill&utm_campaign=internal_referral"
+            target="_blank"
+            rel="noopener"
+            style="color:#fff; margin-left:6px; text-decoration:underline;"
+            onclick="if(typeof gtag==='function'){gtag('event','subdomain_click',{'event_category':'Outbound','event_label':'Hero Pill Link'});}"
+          >
+            Launch Now &rarr;
+          </a>
+        </div>
+
+        <h1 class="hero-glow-title">Crafting Solutions, Building Partnerships</h1>
+        <p class="lead text-light opacity-90 font-weight-bold mb-4">
+          Discuss &bull; Develop &bull; Deploy
         </p>
+
+        <!-- CTA BUTTON GROUP -->
+        <div class="hero-cta-group">
+          <a
+            href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=home_hero&utm_campaign=internal_referral"
+            target="_blank"
+            rel="noopener"
+            class="btn-hero-primary"
+            onclick="if(typeof gtag==='function'){gtag('event','subdomain_click',{'event_category':'Outbound','event_label':'Home Hero CTA'});}"
+            title="Launch HashGANG Chat Application"
+          >
+            <i class="fas fa-comments"></i> Try HashGANG Chat 💬
+          </a>
+
+          <a href="#whatwedo" class="btn-hero-secondary">
+            Explore Services &darr;
+          </a>
+        </div>
+
       </div>
     </div>
 
@@ -173,6 +356,56 @@
       >
         <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
       </a>
+    </div>
+  </section>
+
+  <!-- HASHGANG CHAT SPOTLIGHT FEATURE SECTION -->
+  <section class="py-3">
+    <div class="container">
+      <div class="spotlight-card text-center text-md-left">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge badge-pill badge-light px-3 py-2 text-uppercase font-weight-bold mb-3" style="color:#470470; letter-spacing:1px;">
+              🔥 FEATURED INNOVATION
+            </span>
+            <h2 class="spotlight-title">HashGANG Chat Platform</h2>
+            <p class="spotlight-desc">
+              Experience instant, zero-friction real-time messaging. Built for high performance, privacy, and seamless cross-platform communication.
+            </p>
+
+            <div class="row mb-4">
+              <div class="col-md-4 mb-2">
+                <div class="feature-item-pill">
+                  <i class="fas fa-bolt text-warning"></i> Instant Connection
+                </div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div class="feature-item-pill">
+                  <i class="fas fa-shield-alt text-info"></i> Secure & Private
+                </div>
+              </div>
+              <div class="col-md-4 mb-2">
+                <div class="feature-item-pill">
+                  <i class="fas fa-mobile-alt text-success"></i> Mobile Optimized
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center text-lg-right mt-3 mt-lg-0">
+            <a
+              href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=spotlight_card&utm_campaign=internal_referral"
+              target="_blank"
+              rel="noopener"
+              class="btn-hero-primary"
+              style="padding: 16px 36px; font-size: 1.1rem;"
+              onclick="if(typeof gtag==='function'){gtag('event','subdomain_click',{'event_category':'Outbound','event_label':'Spotlight Banner Card'});}"
+            >
+              Start Chatting Now &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
