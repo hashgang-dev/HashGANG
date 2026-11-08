@@ -7,7 +7,7 @@
   <!-- MAIN DOMAIN -->
   <url>
     <loc>https://hashgang.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- SUBDOMAIN CHAT APP -->
   <url>
     <loc>https://chat.hashgang.com/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,63 +37,63 @@
 
   <url>
     <loc>https://hashgang.com/sitemap.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/home.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/myleader.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/careers.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/doc-validation.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/pricing.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/culture-policy.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/privacy-policy.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/terms-and-conditions.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -101,12 +101,19 @@
   <!-- BLOG INDEX -->
   <url>
     <loc>https://hashgang.com/blog/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- BLOG ARTICLES -->
+  <url>
+    <loc>https://hashgang.com/blog/261108-how-continuous-performance-intelligence-drives-software-teams.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://hashgang.com/blog/260511-why-traditional-performance-appraisals-fail.html</loc>
     <lastmod>2026-05-11</lastmod>
