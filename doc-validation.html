@@ -41,7 +41,7 @@
 
     <meta
       name="description"
-      content="Verify internship certificates and training documents issued by HashGANG Solutions Private Limited. Secure online certificate validation portal."
+      content="Verify official internship certificates and training completion records issued by HashGANG Solutions Private Limited via our secure document validation portal."
     />
 
     <meta
@@ -173,15 +173,18 @@
       main {
         flex: 1;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 40px 16px;
+        gap: 28px;
+        width: 100%;
       }
 
       /* CARD */
       .card {
         width: 100%;
-        max-width: 560px;
+        max-width: 720px;
         background: var(--card);
         border: 1px solid var(--border);
         backdrop-filter: blur(14px);
@@ -189,6 +192,43 @@
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
         padding: 32px;
         text-align: center;
+      }
+
+      .info-card {
+        text-align: left;
+      }
+
+      .info-card h2 {
+        font-size: 20px;
+        margin-bottom: 14px;
+        color: #ffffff;
+      }
+
+      .info-card h3 {
+        font-size: 15px;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        color: #c4b5fd;
+        font-weight: 600;
+      }
+
+      .info-card p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+
+      .info-card ul, .info-card ol {
+        padding-left: 20px;
+        margin-bottom: 14px;
+      }
+
+      .info-card li {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 6px;
       }
 
       h1 {
@@ -306,13 +346,53 @@
         <input
           type="text"
           id="docInput"
-          placeholder="Enter Certificate No"
+          placeholder="Enter Certificate No (e.g. HRD/INT-P/251006001)"
           aria-label="Certificate Number"
         />
 
         <button onclick="verifyDoc()">Verify</button>
 
         <div id="result" class="doc-details"></div>
+      </div>
+
+      <div class="card info-card">
+        <h2>Official Document & Credential Verification Portal</h2>
+        <p>
+          Welcome to the official credential authentication portal of <strong>HashGANG Solutions Private Limited</strong>. This verification gateway allows corporate recruiters, academic institutions, universities, and background verification (BGV) agencies to instantly confirm the authenticity of internship completion certificates, training records, and project experience documents issued by our organization.
+        </p>
+
+        <h3>How Online Verification Works</h3>
+        <ol>
+          <li><strong>Locate Document ID:</strong> Find the unique Certificate Identification Number printed at the bottom or reference header of the document (format: <code>HRD/INT-P/XXXXXXXXX</code>).</li>
+          <li><strong>Submit for Validation:</strong> Enter the exact alphanumeric identifier into the search field above and click <strong>Verify</strong>.</li>
+          <li><strong>Instant Telemetry Confirmation:</strong> The central database cross-references the record in real time, displaying the candidate's verified name, internship specialization, completion tenure, accredited project hours, and mode of engagement.</li>
+        </ol>
+
+        <h3>Information for Background Verification (BGV) Partners</h3>
+        <p>
+          HashGANG Solutions maintains a centralized, tamper-evident digital repository for all internship cohorts and engineering apprenticeships. If your verification protocol requires a formal written email confirmation or signed seal on institutional letterhead, background check teams may contact our central HR desk directly:
+        </p>
+        <ul>
+          <li><strong>Official Verification Desk:</strong> <a href="mailto:info@hashgang.com" style="color: #a78bfa;">info@hashgang.com</a></li>
+          <li><strong>Corporate Registered Office:</strong> 21-10/2-239, Vijaya Durga Nagar, Vijayawada, Andhra Pradesh, India – 520003</li>
+          <li><strong>Direct Telephone / WhatsApp Desk:</strong> +91 91333 85950</li>
+          <li><strong>Standard BGV Turnaround:</strong> Digital queries resolved instantly; written confirmations within 24 to 48 business hours.</li>
+        </ul>
+
+        <h3>Document Security & Fraud Prevention Policy</h3>
+        <p>
+          Each authentic HashGANG certificate contains serialized tracking numbers and security metadata. Any document displaying altered names, modified dates, inflated training hours, or unlisted serial numbers is deemed fraudulent and legally void under applicable IT Act provisions.
+        </p>
+
+        <h3>Frequently Asked Questions</h3>
+        <p><strong>Q: What should I do if a certificate ID returns "Invalid Certificate"?</strong><br />
+        Ensure the Certificate ID is typed accurately, including all capital letters and slashes (e.g., HRD/INT-P/251006001). If the record was issued recently within 48 hours or during an ongoing offline batch, contact our HR team at info@hashgang.com with the candidate's full name and registered college for manual verification.</p>
+
+        <p><strong>Q: Are HashGANG remote internship certificates recognized by engineering universities?</strong><br />
+        Yes. All internship programs conducted by HashGANG Solutions Private Limited follow structured learning curricula, objective project milestones, and rigorous hour logging adhering to industry academic guidelines for degree, engineering, and polytechnic requirements.</p>
+
+        <p><strong>Q: Can past interns request certificate reissuance or recommendation letters?</strong><br />
+        Alumni of our engineering programs can request digital reissuance of lost credentials or employment reference letters by sending their original Certificate Number to our corporate desk.</p>
       </div>
     </main>
 

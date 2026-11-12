@@ -9,6 +9,9 @@ async function loadBlogs() {
     blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const blogList = document.getElementById("blog-list");
+    if (!blogList) return;
+    // If already pre-rendered statically in HTML, avoid re-rendering to prevent CLS
+    if (blogList.children.length > 0) return;
 
     if (blogs.length === 0) {
       blogList.innerHTML = `
