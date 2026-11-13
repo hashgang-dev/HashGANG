@@ -1,5 +1,37 @@
 [
   {
+    "title": "The Engineering Guide to Zero-Latency Progressive Web Apps (PWA)",
+    "slug": "261113-building-zero-latency-progressive-web-apps-engineering-guide",
+    "category": "Frontend Architecture",
+    "date": "2026-11-13",
+    "readTime": "9 min read",
+    "description": "A deep dive into service worker cache strategies, WebAssembly runtime integration, asset version synchronization, and offline-first state handling for enterprise-grade PWAs."
+  },
+  {
+    "title": "How Task-Linked Timesheet Telemetry Eliminates Appraisal Bias in Remote Teams",
+    "slug": "261113-how-task-based-timesheet-tracking-eliminates-appraisal-bias",
+    "category": "HR Analytics",
+    "date": "2026-11-13",
+    "readTime": "8 min read",
+    "description": "Explore how connecting daily timesheet logs directly to granular tasks and sprint deliverables replaces subjective managerial guesswork with objective, auditable performance telemetry."
+  },
+  {
+    "title": "Real-Time WebRTC Architecture vs Centralized Media Streaming: Lessons from Scaling P2P Mesh",
+    "slug": "261113-real-time-webrtc-architecture-vs-centralized-media-streaming",
+    "category": "Infrastructure",
+    "date": "2026-11-13",
+    "readTime": "8 min read",
+    "description": "An architectural deep-dive into scaling real-time stranger video chat and multiplayer gaming without exorbitant cloud media server bills using peer-to-peer WebRTC mesh."
+  },
+  {
+    "title": "Why Static Websites Outperform WordPress and Heavy CMS for Modern Startups",
+    "slug": "261113-why-static-websites-outperform-wordpress-for-modern-startups",
+    "category": "Web Architecture",
+    "date": "2026-11-13",
+    "readTime": "7 min read",
+    "description": "Discover why modern enterprises and high-growth startups are ditching monolithic WordPress installations for ultra-fast, unhackable static HTML5/CSS3 architectures."
+  },
+  {
     "title": "How Continuous Performance Intelligence Drives High-Output Software Teams",
     "slug": "261108-how-continuous-performance-intelligence-drives-software-teams",
     "category": "Engineering",

@@ -93,19 +93,47 @@
   <!-- BLOG INDEX -->
   <url>
     <loc>https://hashgang.com/blog/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://hashgang.com/blog/index.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- BLOG ARTICLES -->
+  <url>
+    <loc>https://hashgang.com/blog/261113-building-zero-latency-progressive-web-apps-engineering-guide.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hashgang.com/blog/261113-how-task-based-timesheet-tracking-eliminates-appraisal-bias.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hashgang.com/blog/261113-real-time-webrtc-architecture-vs-centralized-media-streaming.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hashgang.com/blog/261113-why-static-websites-outperform-wordpress-for-modern-startups.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://hashgang.com/blog/261108-how-continuous-performance-intelligence-drives-software-teams.html</loc>
     <lastmod>2026-11-12</lastmod>
