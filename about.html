@@ -61,7 +61,7 @@
     <meta name="theme-color" content="#0b0f1a" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://hashgang.com/about.html" />
+    <link rel="canonical" href="https://www.hashgang.com/about.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -318,31 +318,114 @@
         .section {
           padding: 20px;
         }
+        .top-nav {
+          padding: 10px 16px;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
         .nav-links-row {
-          display: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 14px;
+        }
+        .nav-links-row a {
+          font-size: 0.85rem;
+        }
+        .nav-btn-chat {
+          padding: 4px 12px;
+          font-size: 0.8rem;
         }
       }
     </style>
+      <link rel="stylesheet" href="/css/nav-footer.css" />
   </head>
 
   <body>
-    <!-- Top Nav Header -->
-    <nav class="top-nav">
-      <a href="index.html" class="nav-brand">
-        <img src="img/logoGIF-v3.gif" alt="HashGANG Logo" />
-        <span>HashGANG</span>
-      </a>
-      <div class="nav-links-row">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="careers.html">Careers</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="https://chat.hashgang.com" target="_blank" class="nav-btn-chat">
-          <i class="fas fa-comments"></i> HashGANG Chat
+            <!-- MOBILE BACKDROP OVERLAY -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+    <!-- HEADER NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="/" class="brand-logo" title="HashGANG Home">
+          <img src="/img/logoGIF-v3.gif" alt="HashGANG Logo" loading="lazy" />
+          <span class="brand-name">HashGANG</span>
         </a>
+
+        <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="/" class="nav-link "><i class="fas fa-home"></i> Home</a>
+          </li>
+          
+          <li class="nav-dropdown" id="dropdownSolutions">
+            <div class="dropdown-btn" onclick="toggleSolutionsDropdown(event)">
+              <i class="fas fa-cubes"></i> Solutions <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+            </div>
+            <div class="dropdown-card">
+              <a
+                href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=dropdown"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dropdown-item-link"
+                onclick="if(typeof gtag==='function'){gtag('event','subdomain_dropdown_click',{'event_category':'Outbound','event_label':'Dropdown Chat'});}"
+              >
+                <div class="item-icon" style="color:#ff007f;">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">
+                    HashGANG Chat <span class="hot-tag">FLAGSHIP</span>
+                  </div>
+                  <div class="item-text-sub">Instant real-time chat platform</div>
+                </div>
+              </a>
+
+              <a href="/myleader.html" class="dropdown-item-link">
+                <div class="item-icon" style="color:#a855f7;">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">MyLeader.app</div>
+                  <div class="item-text-sub">Performance intelligence platform</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="/#solutions" class="nav-link"><i class="fas fa-layer-group"></i> Services</a>
+          </li>
+
+          <li>
+            <a href="/about.html" class="nav-link active"><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+
+          <li>
+            <a href="/blog/" class="nav-link "><i class="fas fa-rss"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="/contact.html" class="nav-link "><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+
+          <li>
+            <a
+              href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=nav_cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-btn-cta"
+              onclick="if(typeof gtag==='function'){gtag('event','subdomain_nav_click',{'event_category':'Outbound','event_label':'Nav Bar CTA'});}"
+            >
+              <i class="fas fa-paper-plane"></i> HashGANG Chat
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </header>
 
     <main class="container">
       <header class="header">
@@ -439,8 +522,9 @@
           console.error("Component load failed:", e);
         }
       }
-      loadComponent("footer", "footer.html");
+      loadComponent("footer", "/footer.html");
     </script>
+      <script src="/js/nav.js"></script>
   </body>
 </html>
 

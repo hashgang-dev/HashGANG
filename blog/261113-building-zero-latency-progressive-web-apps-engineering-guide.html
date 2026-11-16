@@ -61,9 +61,7 @@
     <meta name="author" content="HASHGANG SOLUTIONS PRIVATE LIMITED" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
 
-    <link
-      rel="canonical"
-      href="https://hashgang.com/blog/261113-building-zero-latency-progressive-web-apps-engineering-guide.html"
+    <link rel="canonical" href="https://www.hashgang.com/blog/261113-building-zero-latency-progressive-web-apps-engineering-guide.html"
     />
 
     <!-- Open Graph -->
@@ -120,9 +118,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../fontawesome-5.5/css/all.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/blog.css" />
+    <link rel="stylesheet" href="/css/nav-footer.css" />
+    <link rel="stylesheet" href="./assets/css/post.css" />
 
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -155,130 +155,129 @@
       }
     </script>
 
-    <style>
-      .menu-float {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #470470;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 9999;
-        cursor: pointer;
-        animation: pulse 2s infinite;
-        transition: transform 0.3s ease;
-      }
-      .menu-float svg { width: 28px; height: 28px; }
-      .menu-float:hover { transform: translateY(-5px) scale(1.1); }
-      .tooltip {
-        position: absolute;
-        right: 70px;
-        background-color: #333;
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 5px;
-        font-size: 13px;
-        white-space: nowrap;
-        opacity: 0;
-        transform: translateX(10px);
-        transition: 0.3s;
-      }
-      .menu-float:hover .tooltip { opacity: 1; transform: translateX(0); }
-      @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(71, 4, 112, 0.6); }
-        70% { box-shadow: 0 0 0 15px rgba(71, 4, 112, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(71, 4, 112, 0); }
-      }
-      .post-content h2 { margin-top: 2rem; margin-bottom: 1rem; color: #111827; font-size: 1.5rem; font-weight: 700; line-height: 1.3; }
-      .post-content h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1f2937; font-size: 1.25rem; font-weight: 600; }
-      .post-content p { margin-bottom: 1.25rem; line-height: 1.75; color: #374151; font-size: 1.05rem; }
-      .post-content ul, .post-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: #374151; font-size: 1.05rem; line-height: 1.75; }
-      .post-content li { margin-bottom: 0.5rem; }
-      .post-content blockquote { border-left: 4px solid #470470; padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: #4b5563; background: #fdf4ff; padding: 1rem; border-radius: 0 8px 8px 0; }
-      .post-content pre { background: #1e1e2e; color: #cdd6f4; padding: 1.25rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; font-size: 0.95rem; }
-      .post-content code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-    </style>
   </head>
 
   <body>
-    <!-- Floating Home Button -->
-    <a
-      id="homeBtn"
-      href="/"
-      class="menu-float"
-      rel="noopener"
-      aria-label="Go to HashGANG Home Page"
-      title="Home"
-    >
-      <span class="tooltip">Home</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="white"
-        aria-hidden="true"
-      >
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </svg>
-    </a>
+            <!-- MOBILE BACKDROP OVERLAY -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
 
-    <script>
-      const homeBtn = document.getElementById("homeBtn");
-      if (window.self !== window.top) {
-        homeBtn.style.display = "none";
-      } else {
-        homeBtn.style.display = "flex";
-      }
-    </script>
-
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container nav-container">
-        <a href="/" class="brand" aria-label="HashGANG Home">
-          <img
-            src="../img/logoGIF-v3.gif"
-            alt="HashGANG Logo"
-            class="brand-logo"
-            width="40"
-            height="40"
-          />
-          <span class="brand-text">HashGANG</span>
+    <!-- HEADER NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="/" class="brand-logo" title="HashGANG Home">
+          <img src="/img/logoGIF-v3.gif" alt="HashGANG Logo" loading="lazy" />
+          <span class="brand-name">HashGANG</span>
         </a>
-        <nav class="nav-links">
-          <a href="/index.html">Home</a>
-          <a href="/myleader.html">MyLeader SaaS</a>
-          <a href="./index.html" class="active">Insights</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
+
+        <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="/" class="nav-link "><i class="fas fa-home"></i> Home</a>
+          </li>
+          
+          <li class="nav-dropdown" id="dropdownSolutions">
+            <div class="dropdown-btn" onclick="toggleSolutionsDropdown(event)">
+              <i class="fas fa-cubes"></i> Solutions <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+            </div>
+            <div class="dropdown-card">
+              <a
+                href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=dropdown"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dropdown-item-link"
+                onclick="if(typeof gtag==='function'){gtag('event','subdomain_dropdown_click',{'event_category':'Outbound','event_label':'Dropdown Chat'});}"
+              >
+                <div class="item-icon" style="color:#ff007f;">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">
+                    HashGANG Chat <span class="hot-tag">FLAGSHIP</span>
+                  </div>
+                  <div class="item-text-sub">Instant real-time chat platform</div>
+                </div>
+              </a>
+
+              <a href="/myleader.html" class="dropdown-item-link">
+                <div class="item-icon" style="color:#a855f7;">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">MyLeader.app</div>
+                  <div class="item-text-sub">Performance intelligence platform</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="/#solutions" class="nav-link"><i class="fas fa-layer-group"></i> Services</a>
+          </li>
+
+          <li>
+            <a href="/about.html" class="nav-link "><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+
+          <li>
+            <a href="/blog/" class="nav-link active"><i class="fas fa-rss"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="/contact.html" class="nav-link "><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+
+          <li>
+            <a
+              href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=nav_cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-btn-cta"
+              onclick="if(typeof gtag==='function'){gtag('event','subdomain_nav_click',{'event_category':'Outbound','event_label':'Nav Bar CTA'});}"
+            >
+              <i class="fas fa-paper-plane"></i> HashGANG Chat
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
     <!-- ARTICLE -->
-    <main class="container">
-      <article class="post">
+    <main id="main-content" class="container">
+      <article class="blog-post">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">All Articles</a>
+          <span>/</span>
+          <span>Frontend Architecture</span>
+        </nav>
+
+        <a href="/blog/" class="back-to-blog">
+          <i class="fas fa-arrow-left"></i> All Articles
+        </a>
+
         <!-- Post Header -->
         <header class="post-header">
-          <div class="post-meta-top">
-            <span class="post-category">Frontend Architecture</span>
-            <span class="post-date">Nov 13, 2026</span>
-            <span class="post-read">9 min read</span>
+          <span class="post-category">Frontend Architecture</span>
+          <h1>The Engineering Guide to Zero-Latency Progressive Web Apps (PWA)</h1>
+          <div class="post-meta">
+            <time datetime="2026-11-13">Nov 13, 2026</time>
+            <span>•</span>
+            <span>9 min read</span>
+            <span>•</span>
+            <span>By HashGANG Insights</span>
           </div>
-
-          <h1 class="post-title">
-            The Engineering Guide to Zero-Latency Progressive Web Apps (PWA)
-          </h1>
-
-          <p class="post-lead">
-            Building native-feeling web applications requires far more than adding a manifest.json file. Here is how modern frontend architects combine Service Worker caching cascades, WebAssembly execution, and strict client version locks to deliver instant loads without caching deadlocks.
-          </p>
         </header>
 
         <!-- Post Content -->
         <section class="post-content">
+          <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--text-soft); margin-bottom: 24px; line-height: 1.8;">
+            Building native-feeling web applications requires far more than adding a manifest.json file. Here is how modern frontend architects combine Service Worker caching cascades, WebAssembly execution, and strict client version locks to deliver instant loads without caching deadlocks.
+          </p>
           <h2>The Promise and Peril of Modern PWAs</h2>
           <p>
             Progressive Web Applications promised developers the holy grail of software delivery: write once using standard open web technologies, install on any mobile or desktop operating system via WebAPK or browser prompts, and bypass the 30% revenue extraction and delayed review cycles of native app stores.
@@ -368,26 +367,33 @@ self.addEventListener('activate', (event) => {
         </section>
 
         <!-- RELATED ARTICLES -->
-        <section class="related-posts" style="margin-top: 48px; border-top: 1px solid #e5e7eb; padding-top: 32px;">
-          <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Related Insights</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-            <a href="261113-real-time-webrtc-architecture-vs-centralized-media-streaming.html" style="text-decoration: none; color: inherit; padding: 18px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; display: block;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase;">Infrastructure</span>
-              <h3 style="font-size: 1.05rem; margin: 8px 0; color: #111827;">Real-Time WebRTC Architecture vs Centralized Media</h3>
-              <p style="font-size: 0.88rem; color: #6b7280; line-height: 1.5;">How peer-to-peer audio mesh architectures scale to millions of concurrent sessions with zero media relay bandwidth.</p>
+        <section class="related-posts">
+          <h2>Related Insights</h2>
+          <div class="related-grid">
+            <a href="261113-real-time-webrtc-architecture-vs-centralized-media-streaming.html" class="related-card">
+              <span class="post-category">Infrastructure</span>
+              <h3 style="font-size: 1.2rem; margin: 12px 0 8px; color: var(--heading);">Real-Time WebRTC Architecture vs Centralized Media</h3>
+              <p style="font-size: 0.92rem; color: var(--text-soft); line-height: 1.6;">How peer-to-peer audio mesh architectures scale to millions of concurrent sessions with zero media relay bandwidth.</p>
             </a>
 
-            <a href="261113-why-static-websites-outperform-wordpress-for-modern-startups.html" style="text-decoration: none; color: inherit; padding: 18px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; display: block;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase;">Engineering</span>
-              <h3 style="font-size: 1.05rem; margin: 8px 0; color: #111827;">Why Static Websites Outperform WordPress</h3>
-              <p style="font-size: 0.88rem; color: #6b7280; line-height: 1.5;">How pure static architectures deliver sub-second Core Web Vitals and 100% protection from CMS vulnerabilities.</p>
+            <a href="261113-why-static-websites-outperform-wordpress-for-modern-startups.html" class="related-card">
+              <span class="post-category">Engineering</span>
+              <h3 style="font-size: 1.2rem; margin: 12px 0 8px; color: var(--heading);">Why Static Websites Outperform WordPress</h3>
+              <p style="font-size: 0.92rem; color: var(--text-soft); line-height: 1.6;">How pure static architectures deliver sub-second Core Web Vitals and 100% protection from CMS vulnerabilities.</p>
+            </a>
+          </div>
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="/blog/" class="back-to-blog" style="font-size: 1rem; padding: 12px 28px;">
+              <i class="fas fa-th-large"></i> Explore All Articles
             </a>
           </div>
         </section>
       </article>
     </main>
 
+    <!-- FOOTER LOAD START -->
     <div id="footer"></div>
+    <!-- FOOTER LOAD END -->
 
     <script>
       async function loadComponent(id, file) {
@@ -400,8 +406,9 @@ self.addEventListener('activate', (event) => {
           console.error("Component load failed:", e);
         }
       }
-      loadComponent("footer", "../footer.html");
+      loadComponent("footer", "/footer.html");
     </script>
+      <script src="/js/nav.js"></script>
   </body>
 </html>
 

@@ -61,9 +61,7 @@
     <meta name="author" content="HASHGANG SOLUTIONS PRIVATE LIMITED" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
 
-    <link
-      rel="canonical"
-      href="https://hashgang.com/blog/261108-how-continuous-performance-intelligence-drives-software-teams.html"
+    <link rel="canonical" href="https://www.hashgang.com/blog/261108-how-continuous-performance-intelligence-drives-software-teams.html"
     />
 
     <!-- Open Graph -->
@@ -120,7 +118,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../fontawesome-5.5/css/all.min.css" />
 
+    <link rel="stylesheet" href="/css/nav-footer.css" />
     <link rel="stylesheet" href="./assets/css/post.css" />
 
     <!-- Structured Data (Schema.org) -->
@@ -221,41 +221,124 @@
   </head>
 
   <body>
-    <!-- Skip Navigation -->
-    <a href="#main-content" style="position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-      Skip to content
-    </a>
+            <!-- MOBILE BACKDROP OVERLAY -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
 
-    <!-- Floating Home Button -->
-    <a id="homeBtn" href="/" class="menu-float" rel="noopener" aria-label="Go to HashGANG Home Page" title="Home">
-      <span class="tooltip">Home</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-7 h-7" aria-hidden="true">
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </svg>
-    </a>
+    <!-- HEADER NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="/" class="brand-logo" title="HashGANG Home">
+          <img src="/img/logoGIF-v3.gif" alt="HashGANG Logo" loading="lazy" />
+          <span class="brand-name">HashGANG</span>
+        </a>
 
-    <!-- HERO -->
-    <header class="post-hero">
-      <div class="container">
-        <span class="post-category">Engineering & Performance</span>
-        <h1 class="post-title">
-          How Continuous Performance Intelligence Drives High-Output Software Teams
-        </h1>
-        <div class="post-meta">
-          <span>Published on Nov 8, 2026</span>
-          <span>•</span>
-          <span>7 min read</span>
-          <span>•</span>
-          <span>By HashGANG Insights</span>
-        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="/" class="nav-link "><i class="fas fa-home"></i> Home</a>
+          </li>
+          
+          <li class="nav-dropdown" id="dropdownSolutions">
+            <div class="dropdown-btn" onclick="toggleSolutionsDropdown(event)">
+              <i class="fas fa-cubes"></i> Solutions <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+            </div>
+            <div class="dropdown-card">
+              <a
+                href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=dropdown"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dropdown-item-link"
+                onclick="if(typeof gtag==='function'){gtag('event','subdomain_dropdown_click',{'event_category':'Outbound','event_label':'Dropdown Chat'});}"
+              >
+                <div class="item-icon" style="color:#ff007f;">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">
+                    HashGANG Chat <span class="hot-tag">FLAGSHIP</span>
+                  </div>
+                  <div class="item-text-sub">Instant real-time chat platform</div>
+                </div>
+              </a>
+
+              <a href="/myleader.html" class="dropdown-item-link">
+                <div class="item-icon" style="color:#a855f7;">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">MyLeader.app</div>
+                  <div class="item-text-sub">Performance intelligence platform</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="/#solutions" class="nav-link"><i class="fas fa-layer-group"></i> Services</a>
+          </li>
+
+          <li>
+            <a href="/about.html" class="nav-link "><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+
+          <li>
+            <a href="/blog/" class="nav-link active"><i class="fas fa-rss"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="/contact.html" class="nav-link "><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+
+          <li>
+            <a
+              href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=nav_cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-btn-cta"
+              onclick="if(typeof gtag==='function'){gtag('event','subdomain_nav_click',{'event_category':'Outbound','event_label':'Nav Bar CTA'});}"
+            >
+              <i class="fas fa-paper-plane"></i> HashGANG Chat
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
-    <!-- CONTENT -->
+    <!-- ARTICLE -->
     <main id="main-content" class="container">
-      <article class="post-content">
-        <section class="post-body">
-          <p class="lead">
+      <article class="blog-post">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">All Articles</a>
+          <span>/</span>
+          <span>Engineering</span>
+        </nav>
+
+        <a href="/blog/" class="back-to-blog">
+          <i class="fas fa-arrow-left"></i> All Articles
+        </a>
+
+        <!-- Post Header -->
+        <header class="post-header">
+          <span class="post-category">Engineering & Performance</span>
+          <h1>How Continuous Performance Intelligence Drives High-Output Software Teams</h1>
+          <div class="post-meta">
+            <time datetime="2026-11-08">Nov 8, 2026</time>
+            <span>•</span>
+            <span>7 min read</span>
+            <span>•</span>
+            <span>By HashGANG Insights</span>
+          </div>
+        </header>
+
+        <!-- Post Content -->
+        <section class="post-content">
+          <p class="lead" style="font-size: 1.15rem; font-weight: 500; color: var(--text-soft); margin-bottom: 24px; line-height: 1.8;">
             In modern agile software engineering, code changes are committed every hour, features are deployed multiple times a week, and sprints conclude every fourteen days. Yet remarkably, the majority of tech companies still evaluate developer productivity, engineering impact, and career advancement using an antiquated relic: <strong>the once-a-year annual performance appraisal</strong>.
           </p>
 
@@ -323,26 +406,33 @@
         </section>
 
         <!-- RELATED ARTICLES -->
-        <section class="related-posts" style="margin-top: 48px; border-top: 1px solid #e5e7eb; padding-top: 32px;">
-          <h2 style="font-size: 1.4rem; margin-bottom: 20px;">Related Insights</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-            <a href="260626-continuous-performance-intelligence-future-of-employee-performance-management.html" style="text-decoration: none; color: inherit; padding: 18px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; display: block;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase;">Overview</span>
-              <h3 style="font-size: 1.05rem; margin: 8px 0; color: #111827;">Continuous Performance Intelligence Explained</h3>
-              <p style="font-size: 0.88rem; color: #6b7280; line-height: 1.5;">How CPI replaces annual appraisals with real-time, evidence-based employee evaluation.</p>
+        <section class="related-posts">
+          <h2>Related Insights</h2>
+          <div class="related-grid">
+            <a href="260626-continuous-performance-intelligence-future-of-employee-performance-management.html" class="related-card">
+              <span class="post-category">Overview</span>
+              <h3 style="font-size: 1.2rem; margin: 12px 0 8px; color: var(--heading);">Continuous Performance Intelligence Explained</h3>
+              <p style="font-size: 0.92rem; color: var(--text-soft); line-height: 1.6;">How CPI replaces annual appraisals with real-time, evidence-based employee evaluation.</p>
             </a>
 
-            <a href="260609-why-employees-hate-surprise-performance-ratings.html" style="text-decoration: none; color: inherit; padding: 18px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; display: block;">
-              <span style="font-size: 0.75rem; font-weight: 700; color: #ec4899; text-transform: uppercase;">Culture</span>
-              <h3 style="font-size: 1.05rem; margin: 8px 0; color: #111827;">Why Employees Hate Surprise Performance Ratings</h3>
-              <p style="font-size: 0.88rem; color: #6b7280; line-height: 1.5;">How lack of ongoing feedback damages workplace trust and how to resolve it.</p>
+            <a href="260609-why-employees-hate-surprise-performance-ratings.html" class="related-card">
+              <span class="post-category">Culture</span>
+              <h3 style="font-size: 1.2rem; margin: 12px 0 8px; color: var(--heading);">Why Employees Hate Surprise Performance Ratings</h3>
+              <p style="font-size: 0.92rem; color: var(--text-soft); line-height: 1.6;">How lack of ongoing feedback damages workplace trust and how to resolve it.</p>
+            </a>
+          </div>
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="/blog/" class="back-to-blog" style="font-size: 1rem; padding: 12px 28px;">
+              <i class="fas fa-th-large"></i> Explore All Articles
             </a>
           </div>
         </section>
       </article>
     </main>
 
+    <!-- FOOTER LOAD START -->
     <div id="footer"></div>
+    <!-- FOOTER LOAD END -->
 
     <script>
       async function loadComponent(id, file) {
@@ -355,8 +445,9 @@
           console.error("Component load failed:", e);
         }
       }
-      loadComponent("footer", "../footer.html");
+      loadComponent("footer", "/footer.html");
     </script>
+      <script src="/js/nav.js"></script>
   </body>
 </html>
 

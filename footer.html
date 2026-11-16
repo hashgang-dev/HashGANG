@@ -1,103 +1,50 @@
 <footer class="footer" role="contentinfo" aria-label="Website Footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <h2>Useful Links</h2>
-
-      <nav class="footer-links" aria-label="Footer Navigation">
-        <a
-          href="https://chat.hashgang.com"
-          target="_blank"
-          title="HashGANG Anonymous Stranger Group &amp; Private Chat"
-          aria-label="HashGANG Anonymous Stranger Group &amp; Private Chat"
-          onclick="if(typeof gtag==='function'){gtag('event','subdomain_click',{'event_category':'Outbound','event_label':'Footer Link'});}"
-        >
-          HashGANG Chat (Group &amp; Private Chat) 💬
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand-logo" title="HashGANG Home">
+          <img src="/img/logoGIF-v3.gif" alt="HashGANG Logo" />
+          <span class="brand-name">HashGANG</span>
         </a>
+        <p>Discuss &bull; Develop &bull; Deploy. Custom websites, mobile applications, and real-time chat software.</p>
+      </div>
 
-        <a
-          href="about.html"
-          title="About HashGANG Solutions"
-          aria-label="About HashGANG Solutions"
-        >
-          About Us
-        </a>
+      <div>
+        <h4 class="footer-title">Products &amp; Apps</h4>
+        <ul class="footer-links">
+          <li>
+            <a href="https://chat.hashgang.com" target="_blank" rel="noopener noreferrer" title="HashGANG Anonymous Stranger Group &amp; Private Chat">
+              HashGANG Chat (Group &amp; Private Chat) 💬
+            </a>
+          </li>
+          <li><a href="/myleader.html">MyLeader.app</a></li>
+                    <li><a href="/blog/">Insights Blog</a></li>
+        </ul>
+      </div>
 
-        <a
-          href="contact.html"
-          title="Contact HashGANG Solutions"
-          aria-label="Contact HashGANG Solutions"
-        >
-          Contact Us
-        </a>
+      <div>
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/doc-validation.html">Verify Certificate</a></li>
+          <li><a href="/culture-policy.html">Culture Policy</a></li>
+        </ul>
+      </div>
 
-        <a
-          href="careers.html"
-          title="Careers at HashGANG"
-          aria-label="Careers at HashGANG"
-        >
-          Careers
-        </a>
-
-        <a
-          href="doc-validation.html"
-          title="Verify Internship and Training Certificates"
-          aria-label="Verify Internship and Training Certificates"
-        >
-          Verify Certificate
-        </a>
-
-        <a
-          href="pricing.html"
-          title="HashGANG Static Website Pricing"
-          aria-label="HashGANG Static Website Pricing"
-        >
-          Pricing
-        </a>
-
-        <a
-          href="blog/index.html"
-          title="HashGANG Insights &amp; Engineering Blog"
-          aria-label="HashGANG Insights &amp; Engineering Blog"
-        >
-          Blog
-        </a>
-
-        <a
-          href="sitemap.html"
-          title="HashGANG Website Sitemap"
-          aria-label="HashGANG Website Sitemap"
-        >
-          Sitemap
-        </a>
-
-        <a
-          href="culture-policy.html"
-          title="HashGANG Culture and Conduct Policy"
-          aria-label="HashGANG Culture and Conduct Policy"
-        >
-          Culture Policy
-        </a>
-
-        <a
-          href="privacy-policy.html"
-          title="Read HashGANG Privacy Policy"
-          aria-label="Read HashGANG Privacy Policy"
-        >
-          Privacy Policy
-        </a>
-
-        <a
-          href="terms-and-conditions.html"
-          title="HashGANG Terms and Conditions"
-          aria-label="HashGANG Terms and Conditions"
-        >
-          Terms
-        </a>
-      </nav>
+      <div>
+        <h4 class="footer-title">Legal &amp; Trust</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 HashGANG (#GANG). All rights reserved.</p>
+      <p>&copy; 2026 HashGANG (#GANG). All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -120,98 +67,3 @@
     }
   }
 </script>
-
-<style>
-  .footer {
-    background: linear-gradient(135deg, #470470, #9911ee);
-    color: #fff;
-    padding: 40px 20px 20px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .footer-container {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-  }
-
-  .footer-top h2 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    opacity: 0.9;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-
-  .footer-links a {
-    position: relative;
-    text-decoration: none;
-    color: #ddd;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    padding-bottom: 4px;
-  }
-
-  .footer-links a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background: #fff;
-    transition: width 0.3s ease;
-  }
-
-  .footer-links a:hover,
-  .footer-links a:focus {
-    color: #fff;
-  }
-
-  .footer-links a:hover::after,
-  .footer-links a:focus::after {
-    width: 100%;
-  }
-
-  .footer-bottom {
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 15px;
-  }
-
-  .footer-bottom p {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    line-height: 1.6;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .footer {
-      padding: 30px 15px;
-    }
-
-    .footer-top h2 {
-      font-size: 1.2rem;
-    }
-
-    .footer-links {
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .footer-links a {
-      font-size: 1rem;
-    }
-
-    .footer-bottom {
-      margin-top: 30px;
-    }
-  }
-</style>

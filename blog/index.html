@@ -55,7 +55,7 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://hashgang.com/blog/" />
+    <link rel="canonical" href="https://www.hashgang.com/blog/" />
 
     <!-- Open Graph SEO -->
     <meta
@@ -111,6 +111,8 @@
     />
 
     <!-- Styles -->
+    <link rel="stylesheet" href="../fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="/css/nav-footer.css" />
     <link rel="stylesheet" href="./assets/css/blog.css" />
 
     <!-- Structured Data -->
@@ -132,71 +134,6 @@
         }
       }
     </script>
-
-    <style>
-      .menu-float {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #470470;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        z-index: 1000;
-        cursor: pointer;
-        animation: pulse 2s infinite;
-        transition: transform 0.3s ease;
-      }
-
-      /* Icon */
-      .menu-float svg {
-        width: 28px;
-        height: 28px;
-      }
-
-      /* Hover lift effect */
-      .menu-float:hover {
-        transform: translateY(-5px) scale(1.1);
-      }
-
-      /* Tooltip */
-      .tooltip {
-        position: absolute;
-        right: 70px;
-        background-color: #333;
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 5px;
-        font-size: 13px;
-        white-space: nowrap;
-        opacity: 0;
-        transform: translateX(10px);
-        transition: 0.3s;
-      }
-
-      /* Show tooltip on hover */
-      .menu-float:hover .tooltip {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      /* Pulse animation */
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-        }
-        70% {
-          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-        }
-      }
-    </style>
       <!-- GOOGLE ADSENSE VERIFICATION & SCRIPT -->
     <meta name="google-adsense-account" content="ca-pub-6927010746708408" />
     <script
@@ -222,39 +159,91 @@
       Skip to content
     </a>
 
-    <!-- Floating Home Button -->
-    <a
-      id="homeBtn"
-      href="/"
-      class="menu-float"
-      rel="noopener"
-      aria-label="Go to HashGANG Home Page"
-      title="Home"
-    >
-      <span class="tooltip">Home</span>
+        <!-- MOBILE BACKDROP OVERLAY -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="white"
-        class="w-7 h-7"
-        aria-hidden="true"
-      >
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-      </svg>
-    </a>
+    <!-- HEADER NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="/" class="brand-logo" title="HashGANG Home">
+          <img src="/img/logoGIF-v3.gif" alt="HashGANG Logo" loading="lazy" />
+          <span class="brand-name">HashGANG</span>
+        </a>
 
-    <script>
-      const homeBtn = document.getElementById("homeBtn");
+        <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
 
-      // iframe lo unte hide
-      if (window.self !== window.top) {
-        homeBtn.style.display = "none";
-      } else {
-        // direct URL aythe show
-        homeBtn.style.display = "flex"; // or block
-      }
-    </script>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="/" class="nav-link "><i class="fas fa-home"></i> Home</a>
+          </li>
+          
+          <li class="nav-dropdown" id="dropdownSolutions">
+            <div class="dropdown-btn" onclick="toggleSolutionsDropdown(event)">
+              <i class="fas fa-cubes"></i> Solutions <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+            </div>
+            <div class="dropdown-card">
+              <a
+                href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=dropdown"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dropdown-item-link"
+                onclick="if(typeof gtag==='function'){gtag('event','subdomain_dropdown_click',{'event_category':'Outbound','event_label':'Dropdown Chat'});}"
+              >
+                <div class="item-icon" style="color:#ff007f;">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">
+                    HashGANG Chat <span class="hot-tag">FLAGSHIP</span>
+                  </div>
+                  <div class="item-text-sub">Instant real-time chat platform</div>
+                </div>
+              </a>
+
+              <a href="/myleader.html" class="dropdown-item-link">
+                <div class="item-icon" style="color:#a855f7;">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <div class="item-text-title">MyLeader.app</div>
+                  <div class="item-text-sub">Performance intelligence platform</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <a href="/#solutions" class="nav-link"><i class="fas fa-layer-group"></i> Services</a>
+          </li>
+
+          <li>
+            <a href="/about.html" class="nav-link "><i class="fas fa-info-circle"></i> About Us</a>
+          </li>
+
+          <li>
+            <a href="/blog/" class="nav-link active"><i class="fas fa-rss"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="/contact.html" class="nav-link "><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+
+          <li>
+            <a
+              href="https://chat.hashgang.com/?utm_source=hashgang_main&utm_medium=referral&utm_campaign=internal_referral&utm_content=nav_cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-btn-cta"
+              onclick="if(typeof gtag==='function'){gtag('event','subdomain_nav_click',{'event_category':'Outbound','event_label':'Nav Bar CTA'});}"
+            >
+              <i class="fas fa-paper-plane"></i> HashGANG Chat
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <!-- HERO -->
     <header class="hero">
@@ -404,5 +393,25 @@
 
     <!-- Blog Script -->
     <script src="./assets/js/blog.js"></script>
+    <!-- Navigation Script -->
+    <script src="/js/nav.js"></script>
+
+    <!-- FOOTER LOAD START -->
+    <div id="footer"></div>
+    <!-- FOOTER LOAD END -->
+
+    <script>
+      async function loadComponent(id, file) {
+        try {
+          const res = await fetch(file);
+          if (res.ok) {
+            document.getElementById(id).innerHTML = await res.text();
+          }
+        } catch (e) {
+          console.error("Component load failed:", e);
+        }
+      }
+      loadComponent("footer", "/footer.html");
+    </script>
   </body>
 </html>

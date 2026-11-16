@@ -7,4 +7,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://hashgang.com/sitemap.xml
+Sitemap: https://www.hashgang.com/sitemap.xml
