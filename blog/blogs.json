@@ -1,5 +1,165 @@
 [
   {
+    "title": "HashGANG Chat: Reimagining Anonymous Stranger Communication for the Modern Web",
+    "slug": "261122-hashgang-chat-flagship-anonymous-communication-platform",
+    "category": "Product Insights",
+    "date": "2026-11-22",
+    "readTime": "11 min read",
+    "description": "An inside look at HashGANG Chat: why zero-registration, peer-to-peer WebRTC video, and real-time multiplayer gaming make it the world's most accessible anonymous chat platform."
+  },
+  {
+    "title": "Multiplayer Browser Gaming Without App Downloads: How We Built Real-Time Ludo on WebRTC Mesh",
+    "slug": "261122-realtime-multiplayer-ludo-webrtc-audio-mesh-gaming",
+    "category": "Gaming & Real-Time",
+    "date": "2026-11-22",
+    "readTime": "12 min read",
+    "description": "Explore the engineering behind HashGANG Chat's multiplayer Ludo board game: dynamic 2P/3P/4P modes, deterministic dice mechanics, and synchronized P2P audio mesh for frictionless in-game banter."
+  },
+  {
+    "title": "Voice Masking and Audio Anonymity in Real-Time Web: Protecting User Identity in Live Calls",
+    "slug": "261122-voice-masking-privacy-realtime-audio-anonymity-hashgang-chat",
+    "category": "Privacy & Security",
+    "date": "2026-11-22",
+    "readTime": "10 min read",
+    "description": "How HashGANG Chat protects user privacy during live audio calls using browser-native WebAssembly DSP voice pitch modification, acoustic privacy filters, and zero cloud recording."
+  },
+  {
+    "title": "Building Trust in Anonymous Networks: Proactive Safety Protocols and Ephemeral Media Handling",
+    "slug": "261122-moderation-and-safety-in-anonymous-video-chat-platforms",
+    "category": "Trust & Safety",
+    "date": "2026-11-22",
+    "readTime": "11 min read",
+    "description": "How HashGANG Chat maintains a safe, welcoming environment through client-side shadow dropping, temporary media locks, ephemeral view-once attachments, and community guidelines."
+  },
+  {
+    "title": "Operating a High-Scale Stranger Chat Platform at Zero Media Relay Cost: Lessons from HashGANG Chat",
+    "slug": "261122-zero-cost-high-scale-p2p-chat-architecture-lessons",
+    "category": "Architecture & DevOps",
+    "date": "2026-11-22",
+    "readTime": "12 min read",
+    "description": "Practical operational lessons from scaling chat.hashgang.com to thousands of concurrent users: signaling server lightweight footprint, P2P mesh NAT traversal, waterfall ad mediation, and PWA WebAPK distribution."
+  },
+  {
+    "title": "Scaling WebRTC P2P Mesh: Supporting Millions of Real-Time Sessions with Zero Media Server Costs",
+    "slug": "261114-webrtc-peer-to-peer-mesh-scaling-without-sfu-bandwidth-costs",
+    "category": "Infrastructure",
+    "date": "2026-11-14",
+    "readTime": "11 min read",
+    "description": "A comprehensive architectural guide to running large-scale peer-to-peer audio and video streaming using dynamic full-mesh topologies, STUN/TURN optimization, and ICE candidate filtering."
+  },
+  {
+    "title": "Real-Time Audio DSP in the Browser: Compiling SoundTouch and RubberBand to WebAssembly",
+    "slug": "261115-webassembly-dsp-audio-processing-pitch-shifting-browser",
+    "category": "Frontend Architecture",
+    "date": "2026-11-15",
+    "readTime": "12 min read",
+    "description": "Learn how to compile C++ digital signal processing libraries into WebAssembly (Wasm) and execute audio pitch/tempo shifting inside high-performance AudioWorklet threads without main-thread jitter."
+  },
+  {
+    "title": "Architecting High-Concurrency Socket.io Clusters: Room Sharding, Memory Footprint, and Redis PubSub",
+    "slug": "261116-socketio-high-concurrency-room-sharding-nodejs",
+    "category": "Backend Architecture",
+    "date": "2026-11-16",
+    "readTime": "11 min read",
+    "description": "A production engineering breakdown of scaling Node.js WebSockets to 50,000+ concurrent connections, mitigating V8 garbage collection pauses, and implementing sharded public lounge rooms."
+  },
+  {
+    "title": "Preventing Infinite PWA Reload Loops: Atomic Service Worker Cache Eviction and Multi-Point Version Sync",
+    "slug": "261117-zero-downtime-pwa-versioning-webapk-cache-eviction",
+    "category": "Frontend Architecture",
+    "date": "2026-11-17",
+    "readTime": "10 min read",
+    "description": "An in-depth guide on handling progressive web app client version migrations, Service Worker state synchronization, sessionStorage attempt locking, and avoiding WebAPK cache desync."
+  },
+  {
+    "title": "WebRTC TURN Server Economics: Cutting Cloud Bandwidth Bills with Smart ICE Gathering and CoTURN Tuning",
+    "slug": "261117-webrtc-turn-server-economics-coturn-bandwidth-optimization",
+    "category": "DevOps & Cloud",
+    "date": "2026-11-17",
+    "readTime": "11 min read",
+    "description": "TURN relay servers can incur thousands of dollars in egress fees. Discover how to restrict TURN allocations strictly to symmetric NAT traversal while keeping 85%+ of traffic on direct P2P mesh."
+  },
+  {
+    "title": "Client-Side Shadow Moderation and Behavioral Heuristics in Anonymous Real-Time Networks",
+    "slug": "261118-client-side-shadow-moderation-realtime-chat-abuse-detection",
+    "category": "Security & Trust",
+    "date": "2026-11-18",
+    "readTime": "11 min read",
+    "description": "How to neutralize toxic actors, harassment, and spam in anonymous stranger chat ecosystems using client-side heuristics, automated shadow-dropping, and zero-storage forensic reporting."
+  },
+  {
+    "title": "Multi-Tenant Enterprise SaaS Security: Enforcing Company Scoping and Instant Token Invalidation",
+    "slug": "261118-multi-tenant-saas-security-company-isolation-tokenversion-jwt",
+    "category": "Cybersecurity",
+    "date": "2026-11-18",
+    "readTime": "12 min read",
+    "description": "A security deep-dive into multi-tenant database isolation, guarding against cross-tenant data leaks in MongoDB/PostgreSQL, and instant JWT revocation using tokenVersion counters."
+  },
+  {
+    "title": "Beyond DORA Metrics: Measuring Developer Productivity Through Granular Task-Linked Telemetry",
+    "slug": "261119-measuring-developer-productivity-dora-vs-timesheet-telemetry",
+    "category": "Engineering Leadership",
+    "date": "2026-11-19",
+    "readTime": "11 min read",
+    "description": "Why traditional commit counts and DORA velocity fail to reflect individual cognitive effort. How modern engineering teams use automated task telemetry to reward deep work."
+  },
+  {
+    "title": "Mitigating DDoS and Bot Ingestion on Signaling Gateways Without CAPTCHA Friction",
+    "slug": "261119-anti-tamper-browser-fingerprinting-rate-limiting-webrtc",
+    "category": "Web Security",
+    "date": "2026-11-19",
+    "readTime": "10 min read",
+    "description": "Explore lightweight proof-of-work, TLS fingerprinting, and sliding-window rate limiters that safeguard WebSocket signaling hubs from abusive automated bots without penalizing human users."
+  },
+  {
+    "title": "Native vs Hybrid vs PWA in 2026: Why Enterprise SaaS Is Standardizing on Capacitor and Angular",
+    "slug": "261120-why-hybrid-mobile-apps-fail-enterprise-angular-ionic-capacitor",
+    "category": "Mobile Engineering",
+    "date": "2026-11-20",
+    "readTime": "12 min read",
+    "description": "An architectural comparison between React Native, Flutter, and Capacitor 7. Why enterprise platforms prefer web-native runtimes for 100% code reuse across web, Android WebAPK, and iOS."
+  },
+  {
+    "title": "Eliminating Recency Bias in Annual Reviews: The Science of Continuous Micro-Feedback",
+    "slug": "261120-continuous-performance-feedback-eliminating-recency-bias",
+    "category": "HR Analytics",
+    "date": "2026-11-20",
+    "readTime": "11 min read",
+    "description": "Cognitive psychology reveals managers remember only the last 3 weeks of work during annual appraisals. Learn how continuous performance logs establish fair, year-round accountability."
+  },
+  {
+    "title": "HTTP/3 and 0-RTT QUIC Handshakes: Turbocharging Asset Delivery for High-Traffic Static Platforms",
+    "slug": "261121-http3-quic-zero-roundtrip-static-asset-delivery",
+    "category": "Web Performance",
+    "date": "2026-11-21",
+    "readTime": "10 min read",
+    "description": "Understanding how QUIC eliminates head-of-line blocking and packet loss latency on mobile 4G/5G connections, yielding sub-300ms First Contentful Paint globally."
+  },
+  {
+    "title": "Building Resilient Offline-First SaaS: Optimistic UI, IndexedDB Queues, and Conflict Resolution",
+    "slug": "261121-optimistic-ui-local-state-synchronization-offline-first",
+    "category": "Frontend Architecture",
+    "date": "2026-11-21",
+    "readTime": "11 min read",
+    "description": "How to build enterprise web applications that never display a loading spinner: local mutation ledgers, CRDT-inspired conflict resolution, and background sync APIs."
+  },
+  {
+    "title": "Automated Timesheet Compliance and Overtime Auditing: Navigating Global Remote Work Regulations",
+    "slug": "261122-enterprise-timesheet-compliance-auditing-labor-law",
+    "category": "HR Analytics",
+    "date": "2026-11-22",
+    "readTime": "11 min read",
+    "description": "How automated timesheet telemetry protects organizations from legal liability, ensures statutory compliance with labor laws, and establishes provable audit trails for distributed workforces."
+  },
+  {
+    "title": "Micro-Frontends vs Clean Monolithic Stacks: When Enterprise Architecture Over-Engineers Itself",
+    "slug": "261122-modern-monorepo-vs-polyrepo-micro-frontends-scaling",
+    "category": "Software Architecture",
+    "date": "2026-11-22",
+    "readTime": "12 min read",
+    "description": "A pragmatic critique of micro-frontend sprawl. Why modular static HTML, lightweight micro-services, and unified component repositories deliver 10x higher developer velocity."
+  },
+  {
     "title": "The Engineering Guide to Zero-Latency Progressive Web Apps (PWA)",
     "slug": "261113-building-zero-latency-progressive-web-apps-engineering-guide",
     "category": "Frontend Architecture",

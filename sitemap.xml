@@ -1,165 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- MAIN DOMAIN -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.hashgang.com/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- MAIN PAGES -->
   <url>
     <loc>https://www.hashgang.com/about.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://www.hashgang.com/contact.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.hashgang.com/sitemap.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://www.hashgang.com/myleader.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-
-  <url>
-    <loc>https://www.hashgang.com/careers.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.hashgang.com/doc-validation.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://www.hashgang.com/pricing.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://www.hashgang.com/contact.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/careers.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/doc-validation.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   <url>
     <loc>https://www.hashgang.com/culture-policy.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/privacy-policy.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/terms-and-conditions.html</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
-
-  <!-- BLOG INDEX -->
+  <url>
+    <loc>https://www.hashgang.com/sitemap.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
   <url>
     <loc>https://www.hashgang.com/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-hashgang-chat-flagship-anonymous-communication-platform.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- BLOG ARTICLES -->
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-realtime-multiplayer-ludo-webrtc-audio-mesh-gaming.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-voice-masking-privacy-realtime-audio-anonymity-hashgang-chat.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-moderation-and-safety-in-anonymous-video-chat-platforms.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-zero-cost-high-scale-p2p-chat-architecture-lessons.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261114-webrtc-peer-to-peer-mesh-scaling-without-sfu-bandwidth-costs.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261115-webassembly-dsp-audio-processing-pitch-shifting-browser.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261116-socketio-high-concurrency-room-sharding-nodejs.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261117-zero-downtime-pwa-versioning-webapk-cache-eviction.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261117-webrtc-turn-server-economics-coturn-bandwidth-optimization.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261118-client-side-shadow-moderation-realtime-chat-abuse-detection.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261118-multi-tenant-saas-security-company-isolation-tokenversion-jwt.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261119-measuring-developer-productivity-dora-vs-timesheet-telemetry.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261119-anti-tamper-browser-fingerprinting-rate-limiting-webrtc.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261120-why-hybrid-mobile-apps-fail-enterprise-angular-ionic-capacitor.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261120-continuous-performance-feedback-eliminating-recency-bias.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261121-http3-quic-zero-roundtrip-static-asset-delivery.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261121-optimistic-ui-local-state-synchronization-offline-first.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-enterprise-timesheet-compliance-auditing-labor-law.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hashgang.com/blog/261122-modern-monorepo-vs-polyrepo-micro-frontends-scaling.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.hashgang.com/blog/261113-building-zero-latency-progressive-web-apps-engineering-guide.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/261113-how-task-based-timesheet-tracking-eliminates-appraisal-bias.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/261113-real-time-webrtc-architecture-vs-centralized-media-streaming.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/261113-why-static-websites-outperform-wordpress-for-modern-startups.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/261108-how-continuous-performance-intelligence-drives-software-teams.html</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/260511-why-traditional-performance-appraisals-fail.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/260517-why-attendance-is-not-real-productivity.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/260602-why-managers-struggle-to-give-fair-performance-reviews.html</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/260609-why-employees-hate-surprise-performance-ratings.html</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.hashgang.com/blog/260626-continuous-performance-intelligence-future-of-employee-performance-management.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
 </urlset>

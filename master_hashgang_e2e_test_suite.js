@@ -98,6 +98,26 @@ const TEST_PAGES = [
   { url: "/terms-and-conditions.html", name: "Terms & Conditions" },
   { url: "/sitemap.html", name: "Sitemap" },
   { url: "/blog/", name: "Blog Catalog" },
+  { url: "/blog/261122-hashgang-chat-flagship-anonymous-communication-platform.html", name: "Blog: HashGANG Chat" },
+  { url: "/blog/261122-realtime-multiplayer-ludo-webrtc-audio-mesh-gaming.html", name: "Blog: Multiplayer Browser Gamin" },
+  { url: "/blog/261122-voice-masking-privacy-realtime-audio-anonymity-hashgang-chat.html", name: "Blog: Voice Masking and Audio A" },
+  { url: "/blog/261122-moderation-and-safety-in-anonymous-video-chat-platforms.html", name: "Blog: Building Trust in Anonymo" },
+  { url: "/blog/261122-zero-cost-high-scale-p2p-chat-architecture-lessons.html", name: "Blog: Operating a High-Scale St" },
+  { url: "/blog/261114-webrtc-peer-to-peer-mesh-scaling-without-sfu-bandwidth-costs.html", name: "Blog: WebRTC P2P Mesh" },
+  { url: "/blog/261115-webassembly-dsp-audio-processing-pitch-shifting-browser.html", name: "Blog: WebAssembly DSP" },
+  { url: "/blog/261116-socketio-high-concurrency-room-sharding-nodejs.html", name: "Blog: Socket.io Concurrency" },
+  { url: "/blog/261117-zero-downtime-pwa-versioning-webapk-cache-eviction.html", name: "Blog: Zero-Downtime PWA" },
+  { url: "/blog/261117-webrtc-turn-server-economics-coturn-bandwidth-optimization.html", name: "Blog: TURN Server Economics" },
+  { url: "/blog/261118-client-side-shadow-moderation-realtime-chat-abuse-detection.html", name: "Blog: Shadow Moderation" },
+  { url: "/blog/261118-multi-tenant-saas-security-company-isolation-tokenversion-jwt.html", name: "Blog: Multi-Tenant Security" },
+  { url: "/blog/261119-measuring-developer-productivity-dora-vs-timesheet-telemetry.html", name: "Blog: Developer Productivity" },
+  { url: "/blog/261119-anti-tamper-browser-fingerprinting-rate-limiting-webrtc.html", name: "Blog: Anti-Tamper Bot Defense" },
+  { url: "/blog/261120-why-hybrid-mobile-apps-fail-enterprise-angular-ionic-capacitor.html", name: "Blog: Hybrid vs Capacitor" },
+  { url: "/blog/261120-continuous-performance-feedback-eliminating-recency-bias.html", name: "Blog: Eliminating Recency Bias" },
+  { url: "/blog/261121-http3-quic-zero-roundtrip-static-asset-delivery.html", name: "Blog: HTTP/3 & QUIC" },
+  { url: "/blog/261121-optimistic-ui-local-state-synchronization-offline-first.html", name: "Blog: Optimistic UI" },
+  { url: "/blog/261122-enterprise-timesheet-compliance-auditing-labor-law.html", name: "Blog: Timesheet Compliance" },
+  { url: "/blog/261122-modern-monorepo-vs-polyrepo-micro-frontends-scaling.html", name: "Blog: Monorepo vs Micro-Frontends" },
   { url: "/blog/261113-building-zero-latency-progressive-web-apps-engineering-guide.html", name: "Blog: PWA Guide" },
   { url: "/blog/261113-how-task-based-timesheet-tracking-eliminates-appraisal-bias.html", name: "Blog: Task Timesheet" },
   { url: "/blog/261113-real-time-webrtc-architecture-vs-centralized-media-streaming.html", name: "Blog: WebRTC vs Centralized" },
@@ -120,7 +140,7 @@ async function runMasterHashGANGTestSuite() {
     drawer: { passed: 0, failed: 0, issues: [] },
     footer: { passed: 0, failed: 0, issues: [] },
     security: { passed: 0, failed: 0, issues: [] },
-    performance: { passed: 0, failed: 0, metrics: [] },
+    performance: { passed: 0, failed: 0, metrics: [], issues: [] },
     navigation: { passed: 0, failed: 0, issues: [] }
   };
 
@@ -411,11 +431,11 @@ async function runMasterHashGANGTestSuite() {
       });
 
       console.log(`  ⚡ ${kp.name}: DOMContentLoaded=${timing.domContentLoaded}ms | LoadTime=${loadTime}ms | Payload=${totalKb}KB (${requestCount} requests)`);
-      if (loadTime < 3500) {
+      if (timing.domContentLoaded < 1500) {
         results.performance.passed++;
       } else {
         results.performance.failed++;
-        results.performance.issues.push(`${kp.name} load time (${loadTime}ms) exceeded 3500ms threshold`);
+        results.performance.issues.push(`${kp.name} DOMContentLoaded (${timing.domContentLoaded}ms) exceeded 1500ms threshold`);
       }
     }
     await perfContext.close();
